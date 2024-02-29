@@ -7,9 +7,101 @@ body {
   line-height: 1.5;
   font-family: var(--font-family-sans);
   /* height: 10000px; */
-  background-color: #f6f8fa;
+  background-color: #fff;
 }
 
 :root {
   --clr-primary-1: #bb2019;
+}
+
+.header-box {
+  margin-top: 20px;
+  background-color: var(--clr-primary-1);
+  color: #fff;
+}
+
+.title-content {
+  font-size: 2rem;
+  margin-top: 20px;
+}
+
+.title-about {
+  margin-bottom: 20px;
+}
+
+/* HEADER BODY */
+.header-body {
+  margin-top: 20px;
+}
+.exam-content {
+  display: grid;
+  grid-template-columns: 3fr 9fr;
+  gap: 30px;
+}
+.exam-table {
+  max-height: 500px;
+  border: 1px solid #999;
+  border-radius: 3px;
+  background-color: #f6f8fa;
+  max-height: 200px;
+}
+.table-ticket .ticket-item {
+  background-color: #fff;
+  border: 1px solid #333;
+  border-radius: 3px;
+}
+.table-title {
+  margin-top: 20px;
+  font-size: 1.8rem;
+  color: #777;
+}
+.table-finish:hover {
+  color: var(--clr-primary-1);
+}
+.exam-time {
+  width: 100%;
+  text-align: right;
+  padding-right: 50px;
+  margin-top: 20px;
+}
+.time {
+  color: #666;
+  padding-left: 20px;
+  border: 1px solid var(--clr-primary-1);
+}
+.exam-answer {
+  border: 1px solid #999;
+  overflow-x: scroll;
+  max-height: 600px;
+  margin-bottom: 50px;
+}
+.exam-body {
+  display: grid;
+  grid-template-columns: 2fr 10fr;
+  gap: 20px;
+  padding-left: 20px;
+  margin-top: 20px;
+}
+.exam-mark {
+  background-color: #f6f8fa;
+  border: 1px solid #999;
+  padding: 0px 15px;
+  max-width: 150px;
+  max-height: 140px;
+  font-size: 0.9rem;
+}
+.exam-choice {
+  background-color: lightcyan;
+  padding: 0.8rem 1rem;
+}
+.exam-questions {
+  font-size: 1.1rem;
+}
+.exam-multiple-choices {
+  padding-left: 0.4rem;
+  padding-top: 10px;
+  font-size: 1rem;
+}
+.exam-title {
+  padding-top: 10px;
 }

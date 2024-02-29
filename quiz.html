@@ -13,6 +13,7 @@
     />
     <!-- css -->
     <link rel="stylesheet" href="./assets/css/reset.css" />
+    <link rel="stylesheet" href="./assets/css/styles.css" />
     <link rel="stylesheet" href="./assets/css/quiz.css" />
     <link rel="stylesheet" href="./assets/css/responsive.css" />
     <!-- font awesome -->
@@ -26,17 +27,271 @@
       rel="stylesheet"
     />
   </head>
+
   <body>
-    <!-- START QUIZ -->
-    <div class="start-btn">
-        <button>Start Quiz</button>
+    <!-- HEADER NAVBAR -->
+    <div class="header-navbar">
+      <div class="container">
+        <div class="row">
+          <div class="col-xl-6">
+            <div class="left-side">
+              <div class="logo">
+                <img src="./assets/img/logo_ptit.png" alt="logo" />
+              </div>
+              <article class="navbar-item"><a href="">Bài tập</a></article>
+              <article class="navbar-item exams">
+                <div>Các kỳ thi</div>
+              </article>
+              <ul class="exam-menu">
+                <li class="exam-item"><a href="./quiz.html">Luyện tập</a></li>
+                <li class="exam-item"><a href="./quiz.html">Giữa kỳ</a></li>
+                <li class="exam-item"><a href="./quiz.html">Cuối kỳ</a></li>
+              </ul>
+              <article class="navbar-item">
+                <a href="./instructor.html">Hướng dẫn</a>
+              </article>
+              <article class="navbar-item"></article>
+              <article class="navbar-item"></article>
+            </div>
+          </div>
+          <div class="col-xl-6">
+            <div class="right-side">
+              <div class="user">
+                <div class="logo">
+                  <img src="./assets/img/16typh.jpg" alt="user logo" />
+                </div>
+                <button type="button" class="user-btn">
+                  <i class="user-icon fa-solid fa-sort-down"></i>
+                </button>
+                <div class="menu-user">
+                  <ul>
+                    <li class="user-list">
+                      <a href="" class="user-name">Nguyễn Kim Dũng</a>
+                      <a href="" class="user-id">B21DCVT018</a>
+                    </li>
+                    <li class="user-list">
+                      <a href="">Hồ sơ</a>
+                    </li>
+                    <li class="user-list">
+                      <a href="">Lớp học</a>
+                    </li>
+                    <li class="user-list">
+                      <a href="./index.html">Đăng xuất</a>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
     </div>
 
-    <!-- INFO BOX -->
-    
+    <!-- HEADER TITLE -->
+    <div class="header-title">
+      <div class="container">
+        <div class="row">
+          <div class="header-box">
+            <div class="title-content">Thi trắc nghiệm - CLC</div>
+            <div class="title-about">Đây là bài thi mức độ ...</div>
+          </div>
+        </div>
+      </div>
+    </div>
 
+    <!-- HEADER BODY -->
+    <div class="header-body">
+      <div class="container">
+        <div class="exam-content">
+          <div class="exam-table row">
+            <div class="table-title">Bảng câu hỏi</div>
+            <div class="table-ticket">
+              <div class="row">
+                <button class="ticket-item col-xl-2 m-1">1</button>
+                <button class="ticket-item col-xl-2 m-1">2</button>
+                <button class="ticket-item col-xl-2 m-1">3</button>
+                <button class="ticket-item col-xl-2 m-1">4</button>
+                <button class="ticket-item col-xl-2 m-1">5</button>
+                <button class="ticket-item col-xl-2 m-1">6</button>
+                <button class="ticket-item col-xl-2 m-1">7</button>
+                <button class="ticket-item col-xl-2 m-1">8</button>
+                <button class="ticket-item col-xl-2 m-1">9</button>
+                <button class="ticket-item col-xl-2 m-1">10</button>
+                <button class="ticket-item col-xl-2 m-1">11</button>
+                <button class="ticket-item col-xl-2 m-1">12</button>
+                <button class="ticket-item col-xl-2 m-1">13</button>
+                <button class="ticket-item col-xl-2 m-1">14</button>
+                <button class="ticket-item col-xl-2 m-1">15</button>
+              </div>
+            </div>
+            <a href="" class="table-finish">Làm xong ...</a>
+          </div>
+          <div class="exam-answer">
+            <div class="exam-time">
+              <span class="time">Thời gian còn lại ...</span>
+            </div>
+            <div class="exam-single-answer">
+              <div class="exam-body">
+                <div class="exam-mark">
+                  <div class="exam-title">Câu hỏi 1</div>
+                  <div class="exam-status">Câu trả lời đã được lưu</div>
+                  <div class="exam-point">Đạt điểm 1,00</div>
+                  <div class="exam-icon">
+                    <i class="fa-solid fa-flag"></i> Đặt cờ
+                  </div>
+                </div>
+                <div class="exam-choice">
+                  <div class="exam-questions">
+                    What is the correct name of RAID storage system
+                  </div>
+                  <div class="exam-multiple-choices">
+                    <ul>
+                      <li>
+                        <input type="radio" />
+                        <label>a. Redundant Array of Independent Disks</label>
+                      </li>
+                      <li>
+                        <input type="radio" />
+                        <label>b. Reused Array of Independent Disks</label>
+                      </li>
+                      <li>
+                        <input type="radio" />
+                        <label>c. Redundance Array of Independent Disks</label>
+                      </li>
+                      <li>
+                        <input type="radio" />
+                        <label>d. Redundant Array of Individual Disks</label>
+                      </li>
+                      <li class="clear-choice">Clear my choice</li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+              <div class="exam-button"></div>
+            </div>
+            <div class="exam-single-answer">
+              <div class="exam-body">
+                <div class="exam-mark">
+                  <div class="exam-title">Câu hỏi 1</div>
+                  <div class="exam-status">Câu trả lời đã được lưu</div>
+                  <div class="exam-point">Đạt điểm 1,00</div>
+                  <div class="exam-icon">
+                    <i class="fa-solid fa-flag"></i> Đặt cờ
+                  </div>
+                </div>
+                <div class="exam-choice">
+                  <div class="exam-questions">
+                    What is the correct name of RAID storage system
+                  </div>
+                  <div class="exam-multiple-choices">
+                    <ul>
+                      <li>
+                        <input type="radio" />
+                        <label>a. Redundant Array of Independent Disks</label>
+                      </li>
+                      <li>
+                        <input type="radio" />
+                        <label>b. Reused Array of Independent Disks</label>
+                      </li>
+                      <li>
+                        <input type="radio" />
+                        <label>c. Redundance Array of Independent Disks</label>
+                      </li>
+                      <li>
+                        <input type="radio" />
+                        <label>d. Redundant Array of Individual Disks</label>
+                      </li>
+                      <li class="clear-choice">Clear my choice</li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+              <div class="exam-button"></div>
+            </div>
+            <div class="exam-single-answer">
+              <div class="exam-body">
+                <div class="exam-mark">
+                  <div class="exam-title">Câu hỏi 1</div>
+                  <div class="exam-status">Câu trả lời đã được lưu</div>
+                  <div class="exam-point">Đạt điểm 1,00</div>
+                  <div class="exam-icon">
+                    <i class="fa-solid fa-flag"></i> Đặt cờ
+                  </div>
+                </div>
+                <div class="exam-choice">
+                  <div class="exam-questions">
+                    What is the correct name of RAID storage system
+                  </div>
+                  <div class="exam-multiple-choices">
+                    <ul>
+                      <li>
+                        <input type="radio" />
+                        <label>a. Redundant Array of Independent Disks</label>
+                      </li>
+                      <li>
+                        <input type="radio" />
+                        <label>b. Reused Array of Independent Disks</label>
+                      </li>
+                      <li>
+                        <input type="radio" />
+                        <label>c. Redundance Array of Independent Disks</label>
+                      </li>
+                      <li>
+                        <input type="radio" />
+                        <label>d. Redundant Array of Individual Disks</label>
+                      </li>
+                      <li class="clear-choice">Clear my choice</li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+              <div class="exam-button"></div>
+            </div>
+            <div class="exam-single-answer">
+              <div class="exam-body">
+                <div class="exam-mark">
+                  <div class="exam-title">Câu hỏi 1</div>
+                  <div class="exam-status">Câu trả lời đã được lưu</div>
+                  <div class="exam-point">Đạt điểm 1,00</div>
+                  <div class="exam-icon">
+                    <i class="fa-solid fa-flag"></i> Đặt cờ
+                  </div>
+                </div>
+                <div class="exam-choice">
+                  <div class="exam-questions">
+                    What is the correct name of RAID storage system
+                  </div>
+                  <div class="exam-multiple-choices">
+                    <ul>
+                      <li>
+                        <input type="radio" />
+                        <label>a. Redundant Array of Independent Disks</label>
+                      </li>
+                      <li>
+                        <input type="radio" />
+                        <label>b. Reused Array of Independent Disks</label>
+                      </li>
+                      <li>
+                        <input type="radio" />
+                        <label>c. Redundance Array of Independent Disks</label>
+                      </li>
+                      <li>
+                        <input type="radio" />
+                        <label>d. Redundant Array of Individual Disks</label>
+                      </li>
+                      <li class="clear-choice">Clear my choice</li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+              <div class="exam-button"></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
 
-
+    <script src="./assets/js/main.js"></script>
     <script src="./assets/js/quiz.js"></script>
   </body>
 </html>
