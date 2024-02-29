@@ -105,3 +105,18 @@ body {
 .exam-title {
   padding-top: 10px;
 }
+.exam-button {
+  display: flex;
+  justify-content: space-between;
+  padding: 30px 20px;
+}
+.exam-btn {
+  border: none;
+  border-radius: 2px;
+  text-align: center;
+  padding: 5px 13px;
+  background-color: lightgrey;
+}
+.next-btn {
+  background-color: lightblue;
+}
