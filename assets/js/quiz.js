@@ -48,22 +48,30 @@ document.addEventListener("DOMContentLoaded", function () {
         radioInputs.forEach((input) => {
           input.addEventListener("change", () => {
             const selectedAnswerIndex = parseInt(input.value);
-            if (!selectedAnswers.includes(index)) {
-              selectedAnswers.push(index);
-              if (
-                selectedAnswerIndex ===
-                questionData.answer.charCodeAt(0) - "a".charCodeAt(0)
-              ) {
-                correctAnswersCount++;
+            const questionIndex = parseInt(input.name.replace("question", ""));
+            const correctAnswerIndex = questionData.answer.charCodeAt(0) - "a".charCodeAt(0);
+
+            if (selectedAnswers.includes(questionIndex)) {
+              const oldSelectedIndex = selectedAnswers.indexOf(questionIndex);
+              selectedAnswers.splice(oldSelectedIndex, 1);
+
+              if (oldSelectedIndex === correctAnswerIndex) {
+                correctAnswersCount--;
               }
+            }
+
+            selectedAnswers.push(questionIndex);
+
+            if (selectedAnswerIndex === correctAnswerIndex) {
+              correctAnswersCount++;
             }
           });
         });
-        const flagIcon = document.querySelector(".exam-icon");
-        flagIcon.onclick = () => {
+
+        const flagIcon = questionDiv.querySelector(".exam-icon");
+        flagIcon.addEventListener("click", () => {
           flagIcon.classList.toggle("active");
-          console.log("test");
-        };
+        });
       });
     })
     .catch((error) => console.error("Error fetching questions:", error));
