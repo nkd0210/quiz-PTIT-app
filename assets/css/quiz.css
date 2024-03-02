@@ -12,6 +12,7 @@ body {
 
 :root {
   --clr-primary-1: #bb2019;
+  --clr-primary-2: #e1e4e8;
 }
 
 .header-box {
@@ -39,24 +40,33 @@ body {
   gap: 30px;
 }
 .exam-table {
-  max-height: 500px;
-  border: 1px solid #999;
+  max-height: 300px;
+  border: 1px solid var(--clr-primary-2);
   border-radius: 3px;
   background-color: #f6f8fa;
-  max-height: 200px;
 }
 .table-ticket .ticket-item {
   background-color: #fff;
-  border: 1px solid #333;
+  border: 1px solid var(--clr-primary-2);
   border-radius: 3px;
+  font-size: 0.8rem;
 }
 .table-title {
   margin-top: 20px;
   font-size: 1.8rem;
   color: #777;
 }
+.table-finish {
+  border: 1px solid var(--clr-primary-2);
+  max-width: 114px;
+  border-radius: 3px;
+  margin: 0px auto;
+  text-align: center;
+  max-height: 40px;
+}
 .table-finish:hover {
   color: var(--clr-primary-1);
+  background-color: #fff;
 }
 .exam-time {
   width: 100%;
@@ -70,7 +80,7 @@ body {
   border: 1px solid var(--clr-primary-1);
 }
 .exam-answer {
-  border: 1px solid #999;
+  border: 1px solid var(--clr-primary-2);
   overflow-x: scroll;
   max-height: 600px;
   margin-bottom: 50px;
@@ -84,11 +94,18 @@ body {
 }
 .exam-mark {
   background-color: #f6f8fa;
-  border: 1px solid #999;
+  border: 1px solid var(--clr-primary-2);
   padding: 0px 15px;
   max-width: 150px;
   max-height: 140px;
   font-size: 0.9rem;
+  line-height: 30px;
+}
+.exam-icon:hover {
+  cursor: pointer;
+}
+.exam-icon.active {
+  color: palevioletred;
 }
 .exam-choice {
   background-color: lightcyan;
@@ -119,4 +136,49 @@ body {
 }
 .next-btn {
   background-color: lightblue;
+}
+
+@media (max-width: 992px) {
+  .ticket-item span {
+    text-align: center;
+  }
+  .exam-body {
+    grid-template-columns: 3fr 9fr;
+  }
+  .exam-choice {
+    overflow-x: scroll;
+    overflow-y: scroll;
+  }
+  .table-finish {
+  }
+}
+@media (max-width: 768px) {
+  .exam-content {
+    display: block;
+  }
+  .exam-table {
+    display: none;
+  }
+  .exam-mark {
+    font-size: 0.6rem;
+    overflow-y: scroll;
+    overflow-x: scroll;
+  }
+  .exam-choice {
+    overflow-x: scroll;
+    overflow-y: scroll;
+    width: 277px;
+    max-height: 135px;
+  }
+  .exam-multiple-choice {
+    overflow-y: scroll;
+    overflow-x: scroll;
+  }
+  .done-btn {
+    display: block;
+    background-color: var(--clr-primary-1);
+  }
+  .done-btn:hover a {
+    color: #fff;
+  }
 }

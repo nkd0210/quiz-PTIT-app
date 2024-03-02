@@ -33,33 +33,76 @@
     <div class="header-navbar">
       <div class="container">
         <div class="row">
-          <div class="col-xl-6">
+          <div class="col-md-6">
             <div class="left-side">
+              <!-- hidden navbar -->
+              <div class="navbar-btn hidden">
+                <i class="fa-solid fa-bars"></i>
+              </div>
+              <ul class="navbar-full-menu hidden">
+                <li class="exam-item">
+                  <a href="./error_test.html">Bài tập</a>
+                </li>
+                <li class="exam-item">
+                  <a href="./error_test.html">Luyện tập</a>
+                </li>
+                <li class="exam-item">
+                  <a href="./error_test.html">Giữa kỳ</a>
+                </li>
+                <li class="exam-item">
+                  <a href="./error_test.html">Cuối kỳ</a>
+                </li>
+                <li class="exam-item">
+                  <a href="./instructor.html">Hướng dẫn</a>
+                </li>
+                <br />
+                <!-- <hr /> -->
+                <br />
+                <li class="user-list">
+                  <a href="./error_test.html" class="user-name"
+                    >Nguyễn Kim Dũng</a
+                  >
+                  <a href="./error_test.html" class="user-id">B21DCVT018</a>
+                </li>
+                <li class="exam-item">
+                  <a href="./error_test.html">Hồ sơ</a>
+                </li>
+                <li class="exam-item">
+                  <a href="./error_test.html">Lớp học</a>
+                </li>
+                <li class="exam-item">
+                  <a href="./error_test.html">Đăng xuất</a>
+                </li>
+              </ul>
               <div class="logo">
                 <img src="./assets/img/logo_ptit.png" alt="logo" />
               </div>
               <article class="navbar-item">
-                <a href="./main.html">Bài tập</a>
+                <a href="./error_test.html">Bài tập</a>
               </article>
-              <article class="navbar-item exams">
-                <div>Các kỳ thi</div>
-              </article>
+              <article class="navbar-item exams">Các kỳ thi</article>
               <ul class="exam-menu">
-                <li class="exam-item"><a href="./quiz.html">Luyện tập</a></li>
-                <li class="exam-item"><a href="./quiz.html">Giữa kỳ</a></li>
-                <li class="exam-item"><a href="./quiz.html">Cuối kỳ</a></li>
+                <li class="exam-item">
+                  <a href="./error_test.html">Luyện tập</a>
+                </li>
+                <li class="exam-item">
+                  <a href="./error_test.html">Giữa kỳ</a>
+                </li>
+                <li class="exam-item">
+                  <a href="./error_test.html">Cuối kỳ</a>
+                </li>
               </ul>
               <article class="navbar-item">
-                <a href="./instructor.html">Hướng dẫn</a>
+                <a href="./error_test.html">Hướng dẫn</a>
               </article>
               <article class="navbar-item"></article>
               <article class="navbar-item"></article>
             </div>
           </div>
-          <div class="col-xl-6">
+          <div class="col-md-6">
             <div class="right-side">
               <div class="user">
-                <div class="logo">
+                <div class="user-logo">
                   <img src="./assets/img/16typh.jpg" alt="user logo" />
                 </div>
                 <button type="button" class="user-btn">
@@ -68,17 +111,19 @@
                 <div class="menu-user">
                   <ul>
                     <li class="user-list">
-                      <a href="" class="user-name">Nguyễn Kim Dũng</a>
-                      <a href="" class="user-id">B21DCVT018</a>
+                      <a href="./error_test.html" class="user-name"
+                        >Nguyễn Kim Dũng</a
+                      >
+                      <a href="./error_test.html" class="user-id">B21DCVT018</a>
                     </li>
                     <li class="user-list">
-                      <a href="./profile.html">Hồ sơ</a>
+                      <a href="./error_test.html">Hồ sơ</a>
                     </li>
                     <li class="user-list">
-                      <a href="">Lớp học</a>
+                      <a href="./error_test.html">Lớp học</a>
                     </li>
                     <li class="user-list">
-                      <a href="./index.html">Đăng xuất</a>
+                      <a href="./error_test.html">Đăng xuất</a>
                     </li>
                   </ul>
                 </div>
@@ -109,21 +154,51 @@
             <div class="table-title">Bảng câu hỏi</div>
             <div class="table-ticket">
               <div class="row">
-                <button class="ticket-item col-xl-2 m-1">1</button>
-                <button class="ticket-item col-xl-2 m-1">2</button>
-                <button class="ticket-item col-xl-2 m-1">3</button>
-                <button class="ticket-item col-xl-2 m-1">4</button>
-                <button class="ticket-item col-xl-2 m-1">5</button>
-                <button class="ticket-item col-xl-2 m-1">6</button>
-                <button class="ticket-item col-xl-2 m-1">7</button>
-                <button class="ticket-item col-xl-2 m-1">8</button>
-                <button class="ticket-item col-xl-2 m-1">9</button>
-                <button class="ticket-item col-xl-2 m-1">10</button>
-                <button class="ticket-item col-xl-2 m-1">11</button>
-                <button class="ticket-item col-xl-2 m-1">12</button>
-                <button class="ticket-item col-xl-2 m-1">13</button>
-                <button class="ticket-item col-xl-2 m-1">14</button>
-                <button class="ticket-item col-xl-2 m-1">15</button>
+                <button class="ticket-item btn col-lg-2 col-md-3 m-lg-1 m-md-1">
+                  <span>1</span>
+                </button>
+                <button class="ticket-item btn col-lg-2 col-md-3 m-lg-1 m-md-1">
+                  <span>2</span>
+                </button>
+                <button class="ticket-item btn col-lg-2 col-md-3 m-lg-1 m-md-1">
+                  <span>3</span>
+                </button>
+                <button class="ticket-item btn col-lg-2 col-md-3 m-lg-1 m-md-1">
+                  <span>4</span>
+                </button>
+                <button class="ticket-item btn col-lg-2 col-md-3 m-lg-1 m-md-1">
+                  <span>5</span>
+                </button>
+                <button class="ticket-item btn col-lg-2 col-md-3 m-lg-1 m-md-1">
+                  <span>6</span>
+                </button>
+                <button class="ticket-item btn col-lg-2 col-md-3 m-lg-1 m-md-1">
+                  <span>7</span>
+                </button>
+                <button class="ticket-item btn col-lg-2 col-md-3 m-lg-1 m-md-1">
+                  <span>8</span>
+                </button>
+                <button class="ticket-item btn col-lg-2 col-md-3 m-lg-1 m-md-1">
+                  <span>9</span>
+                </button>
+                <button class="ticket-item btn col-lg-2 col-md-3 m-lg-1 m-md-1">
+                  <span>10</span>
+                </button>
+                <button class="ticket-item btn col-lg-2 col-md-3 m-lg-1 m-md-1">
+                  <span>11</span>
+                </button>
+                <button class="ticket-item btn col-lg-2 col-md-3 m-lg-1 m-md-1">
+                  <span>12</span>
+                </button>
+                <button class="ticket-item btn col-lg-2 col-md-3 m-lg-1 m-md-1">
+                  <span>13</span>
+                </button>
+                <button class="ticket-item btn col-lg-2 col-md-3 m-lg-1 m-md-1">
+                  <span>14</span>
+                </button>
+                <button class="ticket-item btn col-lg-2 col-md-3 m-lg-1 m-md-1">
+                  <span>15</span>
+                </button>
               </div>
             </div>
             <a href="./chamdiem.html" class="table-finish">Làm xong ...</a>
@@ -135,6 +210,8 @@
             <div class="questions-container"></div>
             <div class="exam-button">
               <button class="exam-btn prev-btn">Trang trước</button>
+              <button class="exam-btn done-btn hidden">
+                <a href="./chamdiem.html">Nộp bài</a></button>
               <button class="exam-btn next-btn">Trang tiếp</button>
             </div>
           </div>
@@ -142,6 +219,11 @@
       </div>
     </div>
 
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+      crossorigin="anonymous"
+    ></script>
     <script src="./assets/js/main.js"></script>
     <script src="./assets/js/quiz.js"></script>
   </body>

@@ -25,60 +25,89 @@
     <!-- HEADER NAVBAR -->
     <div class="header-navbar">
         <div class="container">
-            <div class="row">
-                <div class="col-xl-6">
-                    <div class="left-side">
-                        <div class="logo">
-                            <img src="./assets/img/logo_ptit.png" alt="logo" />
-                        </div>
-                        <article class="navbar-item"><a href="">Bài tập</a></article>
-                        <article class="navbar-item exams">
-                            <div>Các kỳ thi</div>
-                        </article>
-                        <ul class="exam-menu">
-                            <li class="exam-item"><a href="./quiz.html">Luyện tập</a></li>
-                            <li class="exam-item"><a href="./quiz.html">Giữa kỳ</a></li>
-                            <li class="exam-item"><a href="./quiz.html">Cuối kỳ</a></li>
-                        </ul>
-                        <article class="navbar-item">
-                            <a href="./instructor.html">Hướng dẫn</a>
-                        </article>
-                        <article class="navbar-item"></article>
-                        <article class="navbar-item"></article>
-                    </div>
+          <div class="row">
+            <div class="col-md-6">
+              <div class="left-side">
+                <!-- hidden navbar -->
+                <div class="navbar-btn hidden">
+                  <i class="fa-solid fa-bars"></i>
                 </div>
-                <div class="col-xl-6">
-                    <div class="right-side">
-                        <div class="user">
-                            <div class="logo">
-                                <img src="./assets/img/16typh.jpg" alt="user logo" />
-                            </div>
-                            <button type="button" class="user-btn">
-                                <i class="user-icon fa-solid fa-sort-down"></i>
-                            </button>
-                            <div class="menu-user">
-                                <ul>
-                                    <li class="user-list">
-                                        <a href="" class="user-name">Nguyễn Kim Dũng</a>
-                                        <a href="" class="user-id">B21DCVT018</a>
-                                    </li>
-                                    <li class="user-list">
-                                        <a href="./profile.html">Hồ sơ</a>
-                                    </li>
-                                    <li class="user-list">
-                                        <a href="">Lớp học</a>
-                                    </li>
-                                    <li class="user-list">
-                                        <a href="./index.html">Đăng xuất</a>
-                                    </li>
-                                </ul>
-                            </div>
-                        </div>
-                    </div>
+                <ul class="navbar-full-menu hidden">
+                  <li class="exam-item"><a href="./main.html">Bài tập</a></li>
+                  <li class="exam-item"><a href="./quiz.html">Luyện tập</a></li>
+                  <li class="exam-item"><a href="./quiz.html">Giữa kỳ</a></li>
+                  <li class="exam-item"><a href="./quiz.html">Cuối kỳ</a></li>
+                  <li class="exam-item">
+                    <a href="./instructor.html">Hướng dẫn</a>
+                  </li>
+                  <br />
+                  <!-- <hr /> -->
+                  <br />
+                  <li class="user-list">
+                    <a href="" class="user-name">Nguyễn Kim Dũng</a>
+                    <a href="" class="user-id">B21DCVT018</a>
+                  </li>
+                  <li class="exam-item">
+                    <a href="./profile.html">Hồ sơ</a>
+                  </li>
+                  <li class="exam-item">
+                    <a href="">Lớp học</a>
+                  </li>
+                  <li class="exam-item">
+                    <a href="./index.html">Đăng xuất</a>
+                  </li>
+                </ul>
+                <div class="logo">
+                  <img src="./assets/img/logo_ptit.png" alt="logo" />
                 </div>
+                <article class="navbar-item">
+                  <a href="./main.html">Bài tập</a>
+                </article>
+                <article class="navbar-item exams">Các kỳ thi</article>
+                <ul class="exam-menu">
+                  <li class="exam-item"><a href="./quiz.html">Luyện tập</a></li>
+                  <li class="exam-item"><a href="./quiz.html">Giữa kỳ</a></li>
+                  <li class="exam-item"><a href="./quiz.html">Cuối kỳ</a></li>
+                </ul>
+                <article class="navbar-item">
+                  <a href="./instructor.html">Hướng dẫn</a>
+                </article>
+                <article class="navbar-item"></article>
+                <article class="navbar-item"></article>
+              </div>
             </div>
+            <div class="col-md-6">
+              <div class="right-side">
+                <div class="user">
+                  <div class="user-logo">
+                    <img src="./assets/img/16typh.jpg" alt="user logo" />
+                  </div>
+                  <button type="button" class="user-btn">
+                    <i class="user-icon fa-solid fa-sort-down"></i>
+                  </button>
+                  <div class="menu-user">
+                    <ul>
+                      <li class="user-list">
+                        <a href="" class="user-name">Nguyễn Kim Dũng</a>
+                        <a href="" class="user-id">B21DCVT018</a>
+                      </li>
+                      <li class="user-list">
+                        <a href="./profile.html">Hồ sơ</a>
+                      </li>
+                      <li class="user-list">
+                        <a href="">Lớp học</a>
+                      </li>
+                      <li class="user-list">
+                        <a href="./index.html">Đăng xuất</a>
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
         </div>
-    </div>
+      </div>
 
     <div class="container">
         <div class="row">
@@ -112,7 +141,7 @@
                                     <br />
                                 </li>
                                 <li class="bar-item"> 
-                                    <p>Errors : </p>
+                                    <p>Improve : </p>
                                     <div class="progress">
                                         <div class="progress-bar bg-warning progress-bar-striped" style="width: 40%"></div>
                                     </div>

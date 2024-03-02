@@ -12,6 +12,7 @@ body {
 
 :root {
   --clr-primary-1: #bb2019;
+  --clr-primary-2: #e1e4e8;
 }
 
 .hidden {
@@ -28,24 +29,24 @@ body {
 /* HEADER NAVBAR */
 .header-navbar {
   background-color: #bb2019;
-  height: 54.4px;
+  height: 52px;
 }
 
 .header-navbar .row {
-  padding: 10.39px 0 !important;
+  padding: 10px 0 !important;
   width: 100%;
   display: flex;
-  justify-content: space-between;
+  /* justify-content: space-between; */
   margin: 0 !important;
 }
 
 .left-side {
   display: flex;
-  width: 100%;
+  /* width: 100%; */
 }
 
 .header-navbar .left-side .logo {
-  max-width: 30px;
+  max-width: 2rem;
   background-color: #fff;
   border-radius: 50%;
   margin-right: 20px;
@@ -55,7 +56,26 @@ body {
   flex-direction: column;
   justify-content: center;
 }
-
+.navbar-btn {
+  color: #fff;
+  margin: auto;
+  position: relative;
+}
+.navbar-full-menu {
+  position: absolute;
+  box-shadow: 0 2px 4px rgba(34, 25, 25, 0.4);
+  border-radius: 0;
+  z-index: 100;
+  top: 55px;
+  left: 196px;
+  width: 200px;
+  height: auto;
+  background-color: #fff;
+}
+.navbar-btn:hover {
+  cursor: pointer;
+  color: #333;
+}
 .left-side .logo img {
   width: 100%;
   height: 100%;
@@ -64,14 +84,15 @@ body {
 
 .navbar-item {
   margin-right: 50px;
-  text-align: left;
+  /* text-align: left; */
   display: flex;
   align-items: center;
   justify-content: center;
+  font-size: 1rem;
 }
 
 .navbar-item a {
-  text-decoration: none;
+  /* text-decoration: none; */
   color: #fff;
 }
 
@@ -111,7 +132,7 @@ body {
 
 .exam-item {
   padding: 5px 5px;
-  border-bottom: 1px solid #ccc;
+  border-bottom: 1px solid var(--clr-primary-2);
 }
 
 .exam-item:hover {
@@ -125,12 +146,12 @@ body {
 
 .right-side .user {
   display: flex;
-  flex-direction: row;
-  text-align: center;
+  /* flex-direction: row; */
+  /* text-align: center; */
   justify-content: flex-end;
   color: #fff;
-  align-items: center;
-  padding-top: 5px;
+  /* align-items: center; */
+  /* padding-top: 5px; */
   position: relative;
 }
 
@@ -146,11 +167,15 @@ body {
   cursor: pointer;
   color: #333;
 }
+.user-logo {
+  position: relative;
+  padding-top: 5.376px !important;
+}
 
-.right-side .logo img {
-  width: 24px;
+.right-side .user-logo img {
+  width: 26px;
   margin-right: 8px;
-  height: 24px;
+  height: 26px;
   cursor: pointer;
   border-radius: 50%;
 }
@@ -207,6 +232,7 @@ body {
 
 .user-list a {
   color: #737679;
+  padding-left: 1rem;
 }
 
 .menu-user .user-list {
@@ -233,9 +259,9 @@ body {
 
 /*BODY STATUS  */
 .status-box {
-  width: 1100px;
-  margin: 30.39px auto 0;
-  padding: 25.6px 39.19px;
+  /* width: 1100px; */
+  margin: 30px auto 0;
+  padding: 25px 39px;
   border-radius: 4px;
   border: solid 1.6px #e1e4e8;
   background-color: #ffffff;
@@ -304,6 +330,6 @@ body {
 /* CAROUSEL */
 .carousel-container {
   margin-top: 30px;
-  width: 90%;
-  padding-left: 100px;
+  /* width: 90%;
+  padding-left: 100px; */
 }
