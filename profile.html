@@ -7,12 +7,13 @@
     <title>WEB PTIT</title>
 
     <!-- bootstrap -->
-    <link
+    <!-- <link
       href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css"
       rel="stylesheet"
       integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN"
       crossorigin="anonymous"
-    />
+    /> -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
     <!-- css -->
     <link rel="stylesheet" href="./assets/css/reset.css" />
     <link rel="stylesheet" href="./assets/css/styles.css" />
@@ -171,31 +172,64 @@
           <div class="profile-main">
             <div class="main-navigation">
               <ul>
-                <li class="active">
+                <li class="tab-item active">
                   <i class="icon fa-solid fa-book-open"></i>
                   Tổng quan
                 </li>
-                <li>
+                <li class="tab-item">
                   <i class="icon fa-solid fa-clock-rotate-left"></i>
                   Lịch sử
                 </li>
-                <li>
+                <li class="tab-item">
                   <i class="icon fa-solid fa-book-open"></i>
                   Thực hành
                 </li>
-                <li>
+                <li class="tab-item">
                   <i class="icon fa-solid fa-book-open"></i>
                   Học tập
                 </li>
               </ul>
             </div>
+            <!-- Tổng quan -->
+            <div class="main-list active">
+              <div class="list-title">Danh sách các bài thi đã tham gia</div>
+
+              <table class="table table-hover table-bordered">
+                <thead>
+                  <tr class="danger">
+                    <th>STT</th>
+                    <th>Tên bài thi</th>
+                    <th>Trạng thái</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td>1</td>
+                    <td>Luyện tập</td>
+                    <td>Không giới hạn thời gian</td>
+                  </tr>
+                  <tr>
+                    <td>2</td>
+                    <td>Cuối kì</td>
+                    <td>Giới hạn trong 30 phút</td>
+                  </tr>
+                  <tr>
+                    <td>3</td>
+                    <td>Giữa kì</td>
+                    <td>Giới hạn trong 60 phút</td>
+                  </tr>
+                  
+                </tbody>
+              </table>
+            </div>
+            <!-- Lịch sử -->
             <div class="main-list">
               <div class="list-title">Danh sách các bài thi đã tham gia</div>
 
               <table class="table table-hover table-bordered">
                 <thead>
-                  <tr>
-                    <th>ID</th>
+                  <tr class="danger">
+                    <th>STT</th>
                     <th>Tên bài thi</th>
                     <th>Điểm số</th>
                   </tr>
@@ -203,58 +237,155 @@
                 <tbody>
                   <tr>
                     <td>1</td>
-                    <td>Doe</td>
-                    <td>john@example.com</td>
+                    <td>Luyện tập</td>
+                    <td>8</td>
                   </tr>
                   <tr>
                     <td>2</td>
-                    <td>Moe</td>
-                    <td>mary@example.com</td>
+                    <td>Cuối kì</td>
+                    <td>6</td>
                   </tr>
                   <tr>
                     <td>3</td>
-                    <td>Dooley</td>
-                    <td>july@example.com</td>
+                    <td>Giữa kì</td>
+                    <td>3</td>
                   </tr>
                   <tr>
                     <td>4</td>
-                    <td>Dooley</td>
-                    <td>july@example.com</td>
+                    <td>Cuối kì</td>
+                    <td>10</td>
                   </tr>
                   <tr>
                     <td>5</td>
-                    <td>Dooley</td>
-                    <td>july@example.com</td>
+                    <td>Luyện tập</td>
+                    <td>1</td>
                   </tr>
                   <tr>
                     <td>6</td>
-                    <td>Dooley</td>
-                    <td>july@example.com</td>
+                    <td>Cuối kì</td>
+                    <td>3</td>
                   </tr>
                   <tr>
                     <td>7</td>
-                    <td>Dooley</td>
-                    <td>july@example.com</td>
+                    <td>Luyện tập</td>
+                    <td>3</td>
                   </tr>
                   <tr>
                     <td>8</td>
-                    <td>Dooley</td>
-                    <td>july@example.com</td>
+                    <td>Cuối kì</td>
+                    <td>5</td>
                   </tr>
                   <tr>
                     <td>9</td>
-                    <td>Dooley</td>
-                    <td>july@example.com</td>
+                    <td>Giữa kì</td>
+                    <td>9</td>
                   </tr>
                   <tr>
                     <td>10</td>
-                    <td>Dooley</td>
-                    <td>july@example.com</td>
+                    <td>Cuối kì</td>
+                    <td>3</td>
                   </tr>
                   <tr>
                     <td>11</td>
-                    <td>Dooley</td>
-                    <td>july@example.com</td>
+                    <td>Luyện tập</td>
+                    <td>2</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+            <!-- Thực hành -->
+            <div class="main-list">
+              <div class="list-title">Danh sách các bài thi đã tham gia</div>
+
+              <table class="table table-hover table-bordered">
+                <thead>
+                  <tr class="danger">
+                    <th>STT</th>
+                    <th>Tên bài thi</th>
+                    <th>Điểm số</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td>1</td>
+                    <td>Luyện tập</td>
+                    <td>8</td>
+                  </tr>
+                  <tr>
+                    <td>2</td>
+                    <td>Cuối kì</td>
+                    <td>6</td>
+                  </tr>
+                  <tr>
+                    <td>3</td>
+                    <td>Giữa kì</td>
+                    <td>3</td>
+                  </tr>
+                  <tr>
+                    <td>4</td>
+                    <td>Cuối kì</td>
+                    <td>10</td>
+                  </tr>
+                  <tr>
+                    <td>5</td>
+                    <td>Luyện tập</td>
+                    <td>1</td>
+                  </tr>
+                  <tr>
+                    <td>6</td>
+                    <td>Cuối kì</td>
+                    <td>3</td>
+                  </tr>
+                  <tr>
+                    <td>7</td>
+                    <td>Luyện tập</td>
+                    <td>3</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+            <!-- Học tập -->
+            <div class="main-list">
+              <div class="list-title">Danh sách các bài thi đã tham gia</div>
+
+              <table class="table table-hover table-bordered">
+                <thead>
+                  <tr class="danger">
+                    <th>STT</th>
+                    <th>Tên bài thi</th>
+                    <th>Điểm số</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td>1</td>
+                    <td>Luyện tập</td>
+                    <td>8</td>
+                  </tr>
+                  <tr>
+                    <td>2</td>
+                    <td>Cuối kì</td>
+                    <td>6</td>
+                  </tr>
+                  <tr>
+                    <td>3</td>
+                    <td>Giữa kì</td>
+                    <td>3</td>
+                  </tr>
+                  <tr>
+                    <td>4</td>
+                    <td>Cuối kì</td>
+                    <td>10</td>
+                  </tr>
+                  <tr>
+                    <td>5</td>
+                    <td>Luyện tập</td>
+                    <td>1</td>
+                  </tr>
+                  <tr>
+                    <td>6</td>
+                    <td>Cuối kì</td>
+                    <td>3</td>
                   </tr>
                 </tbody>
               </table>
@@ -263,7 +394,9 @@
         </div>
       </div>
     </div>
-
+   
     <script src="./assets/js/main.js"></script>
+    <script src="./assets/js/profile.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
   </body>
 </html>

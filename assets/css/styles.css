@@ -326,6 +326,10 @@ body {
   border-radius: 4px;
   margin: 15px 0px;
 }
+.join-btn:hover {
+  cursor: pointer;
+  color: var(--clr-primary-1);
+}
 
 /* CAROUSEL */
 .carousel-container {

@@ -13,6 +13,8 @@
       integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN"
       crossorigin="anonymous"
     />
+    <!-- jQuery library -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
     <!-- css -->
     <link rel="stylesheet" href="./assets/css/reset.css" />
     <link rel="stylesheet" href="./assets/css/styles.css" />
@@ -97,14 +99,18 @@
                 <div class="menu-user">
                   <ul>
                     <li class="user-list">
-                      <a href="./profile-user.html" class="user-name">Nguyễn Kim Dũng</a>
-                      <a href="./profile-user.html" class="user-id">B21DCVT018</a>
+                      <a href="./profile-user.html" class="user-name"
+                        >Nguyễn Kim Dũng</a
+                      >
+                      <a href="./profile-user.html" class="user-id"
+                        >B21DCVT018</a
+                      >
                     </li>
                     <li class="user-list">
                       <a href="./profile.html">Hồ sơ</a>
                     </li>
                     <li class="user-list">
-                      <a href="">Lớp học</a>
+                      <a href="./profile.html">Lớp học</a>
                     </li>
                     <li class="user-list">
                       <a href="./index.html">Đăng xuất</a>
@@ -126,15 +132,19 @@
             <div class="status-header">
               <div class="status-title">Bài tập</div>
               <div class="status-form">
-                <input type="text" placeholder="Tìm theo mã, tiêu đề" />
+                <input
+                  type="text"
+                  id="myInput"
+                  placeholder="Tìm theo mã, tiêu đề"
+                />
                 <input type="submit" class="form-submit" value="/" />
               </div>
             </div>
 
-            <div class="carousel-container">
-              <!-- Carousel -->
+            <!-- <div class="carousel-container">
+           
               <div id="demo" class="carousel slide" data-bs-ride="carousel">
-                <!-- Indicators/dots -->
+                
                 <div class="carousel-indicators">
                   <button
                     type="button"
@@ -154,7 +164,7 @@
                   ></button>
                 </div>
 
-                <!-- The slideshow/carousel -->
+               
                 <div class="carousel-inner">
                   <div class="carousel-item active">
                     <a href="./quiz.html">
@@ -188,7 +198,7 @@
                   </div>
                 </div>
 
-                <!-- Left and right controls/icons -->
+              
                 <button
                   class="carousel-control-prev"
                   type="button"
@@ -206,6 +216,52 @@
                   <span class="carousel-control-next-icon"></span>
                 </button>
               </div>
+            </div> -->
+
+            <div class="status-content">
+              <br />
+              <table class="table table-bordered table-striped">
+                <thead>
+                  <tr class="danger">
+                    <th>STT</th>
+                    <th>Tên bài tập</th>
+                    <th>Trạng thái</th>
+                    <th>Làm bài</th>
+                  </tr>
+                </thead>
+                <tbody id="myTable">
+                  <tr>
+                    <td>1</td>
+                    <td>Luyện tập</td>
+                    <td>Không tính thời gian</td>
+                    <td>
+                      <a href="./quiz.html"
+                        ><div class="join-btn">Vào làm</div></a
+                      >
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>2</td>
+                    <td>Giữa kì</td>
+                    <td>Giới hạn trong 30 phút</td>
+                    <td>
+                      <a href="./quiz.html"
+                        ><div class="join-btn">Vào làm</div></a
+                      >
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>3</td>
+                    <td>Cuối kì</td>
+                    <td>Giới hạn trong 60 phút</td>
+                    <td>
+                      <a href="./quiz.html"
+                        ><div class="join-btn">Vào làm</div></a
+                      >
+                    </td>
+                  </tr>
+                </tbody>
+              </table>
             </div>
           </div>
         </div>
@@ -213,5 +269,15 @@
     </div>
 
     <script src="./assets/js/main.js"></script>
+    <script>
+      $(document).ready(function () {
+        $("#myInput").on("keyup", function () {
+          var value = $(this).val().toLowerCase();
+          $("#myTable tr").filter(function () {
+            $(this).toggle($(this).text().toLowerCase().indexOf(value) > -1);
+          });
+        });
+      });
+    </script>
   </body>
 </html>
