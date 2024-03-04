@@ -26,6 +26,7 @@ const data = {
 };
 
 // Function to populate exam table
+// Function to populate the exam table
 function populateExamTable() {
   const examTableBody = document.getElementById("exam-table-body");
   examTableBody.innerHTML = "";
@@ -43,6 +44,12 @@ function populateExamTable() {
     examTableBody.appendChild(row);
   });
 }
+
+// Initially populate the exam table
+document.addEventListener("DOMContentLoaded", function() {
+  populateExamTable();
+});
+
 
 // Function to populate user table
 function populateUserTable() {
@@ -80,10 +87,9 @@ function populateStatsTable() {
   });
 }
 
-// Initially populate tables
 populateExamTable();
 populateUserTable();
-populateStatsTable(); // Add this line to populate the statistics table
+populateStatsTable(); 
 
 
 const tabs = document.querySelectorAll(".tab-item");
@@ -100,3 +106,12 @@ tabs.forEach(function (tab, index) {
     list.classList.add("active");
   };
 });
+
+document.addEventListener("DOMContentLoaded", function() {
+  const createExamBtn = document.getElementById("createExamBtn");
+
+  createExamBtn.addEventListener("click", function() {
+    window.location.href = "designTest.html";
+  });
+});
+

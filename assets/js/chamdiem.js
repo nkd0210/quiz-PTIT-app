@@ -4,14 +4,11 @@ document.addEventListener("DOMContentLoaded", function () {
 
   // Hiển thị điểm số
   const scoreContainer = document.querySelector(".score-container");
-  scoreContainer.innerHTML = `<div class="score-container">
-  <h2>KẾT QUẢ BÀI LÀM</h2>
-  <p>Bạn đã đạt được:</p>
-  <p class="score">${score}/15</p>
-</div>`;
+  scoreContainer.innerHTML = `
+    <h2>Điểm số của bạn</h2>
+    <p class="score">${score}/15</p>
+  `;
 });
-
-
 
 var now = new Date();
 var options = {

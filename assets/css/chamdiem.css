@@ -16,11 +16,13 @@ body {
 
 /* CSS cho phần điểm số */
 .score-container {
+  max-width: 100%;
   text-align: center;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
+  background-color: white;
 }
 
 .score-container h2 {
@@ -29,9 +31,10 @@ body {
   margin-bottom: 10px;
 }
 
-.score-container p {
-  font-size: 18px;
-  color: #666;
+.score-container .score {
+  font-size: 36px;
+  color: #bb2019;
+  font-weight: bold;
 }
 
 .score {
@@ -91,4 +94,28 @@ body {
   margin-left: 10px;
   padding: 6px 10px;
   font-size: 1rem;
+}
+
+.answer-details {
+  margin-top: 20px;
+}
+
+.question {
+  margin-bottom: 20px;
+  border: 1px solid #ccc;
+  padding: 10px;
+  border-radius: 5px;
+}
+
+.question h3 {
+  font-size: 18px;
+  margin-bottom: 5px;
+}
+
+.question p {
+  margin-bottom: 5px;
+}
+
+.question p:last-child {
+  font-weight: bold;
 }
