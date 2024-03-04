@@ -3,6 +3,32 @@ document.addEventListener("DOMContentLoaded", function () {
   let selectedAnswers = [];
   let submitted = false;
 
+  // Function to start countdown timer
+  function startTimer(duration, display) {
+    var timer = duration,
+      minutes,
+      seconds;
+    setInterval(function () {
+      minutes = parseInt(timer / 60, 10);
+      seconds = parseInt(timer % 60, 10);
+
+      minutes = minutes < 10 ? "0" + minutes : minutes;
+      seconds = seconds < 10 ? "0" + seconds : seconds;
+
+      display.textContent = minutes + ":" + seconds;
+
+      if (--timer < 0) {
+        window.location.href = "./chamdiem.html";
+      }
+    }, 1000);
+  }
+
+  var examDuration = 1800; 
+
+  var timerDisplay = document.querySelector(".time");
+
+  startTimer(examDuration, timerDisplay);
+
   fetch("./questions.json")
     .then((response) => response.json())
     .then((data) => {

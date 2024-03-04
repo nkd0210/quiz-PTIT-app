@@ -46,6 +46,7 @@ body {
 
 .main-navigation {
   padding-top: 1rem;
+  margin-left: 270px;
   border-bottom: 1px solid #e1e4e8;
 }
 
@@ -89,12 +90,15 @@ body {
 .main-list {
   display: none;
 }
+
 .danger {
   background: var(--clr-primary-3);
 }
+
 .dashboard-list.active {
   display: block;
 }
+
 .dashboard-btn {
   border: none;
   background-color: var(--clr-primary-1);
@@ -103,6 +107,7 @@ body {
   padding: 3px 5px;
   margin-bottom: 20px;
 }
+
 .edit-btn {
   border: none;
   background-color: lightblue;
@@ -111,6 +116,7 @@ body {
   padding: 3px 15px;
   margin: 0px 5px;
 }
+
 .delete-btn {
   border: none;
   background-color: var(--clr-primary-1);
@@ -119,7 +125,21 @@ body {
   padding: 3px 15px;
   margin: 0px 5px;
 }
+
 .last-column {
   display: flex;
   justify-content: flex-end;
+}
+
+.tab-item {
+  padding: 10px 20px;
+  border: 1px solid #e1e4e8;
+  border-bottom: none;
+  border-radius: 2px 2px 0 0;
+  cursor: pointer;
+}
+
+.tab-item.active {
+  background-color: #f6f8fa;
+  color: var(--clr-primary-1);
 }

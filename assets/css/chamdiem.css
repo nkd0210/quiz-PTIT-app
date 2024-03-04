@@ -14,10 +14,33 @@ body {
   --clr-primary-1: #bb2019;
 }
 
+/* CSS cho phần điểm số */
 .score-container {
-  font-size: 24px;
-  /* Điều chỉnh kích thước phù hợp */
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
 }
+
+.score-container h2 {
+  font-size: 24px;
+  color: #333;
+  margin-bottom: 10px;
+}
+
+.score-container p {
+  font-size: 18px;
+  color: #666;
+}
+
+.score {
+  font-size: 36px;
+  color: #bb2019;
+  font-weight: bold;
+}
+
+
 
 .mark-content {
   background-color: #fff;
