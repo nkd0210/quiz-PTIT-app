@@ -1,24 +1,329 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Admin Dashboard</title>
-<link rel="stylesheet" href="./assets/css/adminDashboard.css">
-</head>
-<body>
-<div class="container">
-    <h2>Admin Dashboard</h2>
-    <div class="participants-container">
-        <h3>Danh sách người tham gia và điểm</h3>
-        <ul id="participantsList"></ul>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Admin Dashboard</title>
+    <!-- bootstrap -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN"
+      crossorigin="anonymous"
+    />
+    <!-- css -->
+    <link rel="stylesheet" href="./assets/css/reset.css" />
+    <link rel="stylesheet" href="./assets/css/styles.css" />
+    <link rel="stylesheet" href="./assets/css/profile.css" />
+    <link rel="stylesheet" href="./assets/css/adminDashboard.css" />
+    <link rel="stylesheet" href="./assets/css/responsive.css" />
+    <!-- font awesome -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+    />
+  </head>
+
+  <body>
+    <!-- HEADER NAVBAR -->
+    <div class="header-navbar">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-8">
+            <div class="left-side">
+              <!-- hidden navbar -->
+              <div class="navbar-btn hidden">
+                <i class="fa-solid fa-bars"></i>
+              </div>
+              <ul class="navbar-full-menu hidden">
+                <li class="exam-item">
+                  <a href="./adminDashboard.html">Dashboard Admin</a>
+                </li>
+                <li class="exam-item">
+                  <a href="./designTest.html">Tạo/Chỉnh sửa Kỳ thi</a>
+                </li>
+                <li class="exam-item">
+                  <a href="./thongKe.html">Thống kê</a>
+                </li>
+                <li class="exam-item">
+                  <a href="./ketquaSV.html">Kết Quả của Sinh Viên</a>
+                </li>
+                <br />
+                <!-- <hr /> -->
+                <br />
+                <li class="user-list">
+                  <a href="" class="user-name">Admin</a>
+                </li>
+                <li class="exam-item">
+                  <a href="">Hồ sơ</a>
+                </li>
+                <li class="exam-item">
+                  <a href="">Lớp học</a>
+                </li>
+                <li class="exam-item">
+                  <a href="">Đăng xuất</a>
+                </li>
+              </ul>
+              <div class="logo">
+                <img src="./assets/img/logo_ptit.png" alt="logo" />
+              </div>
+              <article class="navbar-item">
+                <a href="./adminDashboard.html">Dashboard Admin</a>
+              </article>
+              <article class="navbar-item exams">
+                <a href="./designTest.html">Tạo/Chỉnh sửa Kỳ thi</a>
+              </article>
+              <article class="navbar-item">
+                <a href="./thongKe.html"> Thống kê</a>
+              </article>
+              <article class="navbar-item">
+                <a href="./ketquaSV.html"> Kết Quả của Sinh Viên</a>
+              </article>
+            </div>
+          </div>
+          <div class="col-md-4">
+            <div class="right-side">
+              <div class="user">
+                <div class="user-logo">
+                  <img src="./assets/img/admin.jpg" alt="user logo" />
+                </div>
+                <button type="button" class="user-btn">
+                  <i class="user-icon fa-solid fa-sort-down"></i>
+                </button>
+                <div class="menu-user">
+                  <ul>
+                    <li class="user-list">
+                      <a href="" class="user-name">Admin</a>
+                    </li>
+                    <li class="user-list">
+                      <a href="">Hồ sơ</a>
+                    </li>
+                    <li class="user-list">
+                      <a href="">Lớp học</a>
+                    </li>
+                    <li class="user-list">
+                      <a href="./index.html">Đăng xuất</a>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
     </div>
-    <div class="questions-container">
-        <h3>Danh sách câu hỏi</h3>
-        <ul id="questionsList"></ul>
+
+    <!-- BODY -->
+    <div class="dashboard-content">
+      <div class="container">
+        <div class="dashboard-main">
+          <div class="main-navigation">
+            <ul>
+              <li class="tab-item active">
+                <i class="icon fa-solid fa-book-open"></i>
+                Danh sách các kỳ thi
+              </li>
+              <li class="tab-item">
+                <i class="icon fa-solid fa-book-open"></i>
+                Danh sách người dùng
+              </li>
+              <li class="tab-item">
+                <i class="icon fa-solid fa-book-open"></i>
+                Thống kê
+              </li>
+            </ul>
+          </div>
+          <!-- Danh sách các kỳ thi -->
+          <div class="main-list active">
+            <table class="table table-hover table-bordered">
+              <thead>
+                <tr class="danger">
+                  <th style="background-color: #f8d7da">STT</th>
+                  <th style="background-color: #f8d7da">Tên bài thi</th>
+                  <th style="background-color: #f8d7da">Trạng thái</th>
+                  <th style="background-color: #f8d7da"></th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>1</td>
+                  <td>Luyện tập</td>
+                  <td>Không giới hạn thời gian</td>
+                  <td class="last-column">
+                    <button class="edit-btn">Edit</button>
+                    <button class="delete-btn">Delete</button>
+                  </td>
+                </tr>
+                <tr>
+                  <td>2</td>
+                  <td>Cuối kì</td>
+                  <td>Giới hạn thời gian</td>
+                  <td class="last-column">
+                    <button class="edit-btn">Edit</button>
+                    <button class="delete-btn">Delete</button>
+                  </td>
+                </tr>
+                <tr>
+                  <td>3</td>
+                  <td>Giữa kì</td>
+                  <td>Giới hạn thời gian</td>
+                  <td class="last-column">
+                    <button class="edit-btn">Edit</button>
+                    <button class="delete-btn">Delete</button>
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+            <button class="dashboard-btn">Thêm bài thi</button>
+          </div>
+          <!--  Danh sách người dùng -->
+          <div class="main-list">
+            <table class="table table-hover table-bordered">
+              <thead>
+                <tr class="danger">
+                  <th style="background-color: #f8d7da">STT</th>
+                  <th style="background-color: #f8d7da">Tên người dùng</th>
+                  <th style="background-color: #f8d7da"></th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>1</td>
+                  <td>Kim Dũng</td>
+                  <td class="last-column">
+                    <button class="edit-btn">Edit</button>
+                    <button class="delete-btn">Delete</button>
+                  </td>
+                </tr>
+                <tr>
+                  <td>2</td>
+                  <td>Nam Anh</td>
+                  <td class="last-column">
+                    <button class="edit-btn">Edit</button>
+                    <button class="delete-btn">Delete</button>
+                  </td>
+                </tr>
+                <tr>
+                  <td>3</td>
+                  <td>Công Bách</td>
+                  <td class="last-column">
+                    <button class="edit-btn">Edit</button>
+                    <button class="delete-btn">Delete</button>
+                  </td>
+                </tr>
+                <tr>
+                  <td>4</td>
+                  <td>Ngọc Long</td>
+                  <td class="last-column">
+                    <button class="edit-btn">Edit</button>
+                    <button class="delete-btn">Delete</button>
+                  </td>
+                </tr>
+                <tr>
+                  <td>5</td>
+                  <td>Tùng Anh</td>
+                  <td class="last-column">
+                    <button class="edit-btn">Edit</button>
+                    <button class="delete-btn">Delete</button>
+                  </td>
+                </tr>
+                <tr>
+                  <td>6</td>
+                  <td>Bình Minh</td>
+                  <td class="last-column">
+                    <button class="edit-btn">Edit</button>
+                    <button class="delete-btn">Delete</button>
+                  </td>
+                </tr>
+                <tr>
+                  <td>7</td>
+                  <td>Tùng Lâm</td>
+                  <td class="last-column">
+                    <button class="edit-btn">Edit</button>
+                    <button class="delete-btn">Delete</button>
+                  </td>
+                </tr>
+                <tr>
+                  <td>8</td>
+                  <td>Huy Hoàng</td>
+                  <td class="last-column">
+                    <button class="edit-btn">Edit</button>
+                    <button class="delete-btn">Delete</button>
+                  </td>
+                </tr>
+                <tr>
+                  <td>9</td>
+                  <td>Khánh Linh</td>
+                  <td class="last-column">
+                    <button class="edit-btn">Edit</button>
+                    <button class="delete-btn">Delete</button>
+                  </td>
+                </tr>
+                <tr>
+                  <td>10</td>
+                  <td>Trung Hiếu</td>
+                  <td class="last-column">
+                    <button class="edit-btn">Edit</button>
+                    <button class="delete-btn">Delete</button>
+                  </td>
+                </tr>
+                <tr>
+                  <td>11</td>
+                  <td>Tuấn Hiệp</td>
+                  <td class="last-column">
+                    <button class="edit-btn">Edit</button>
+                    <button class="delete-btn">Delete</button>
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+            <button class="dashboard-btn">Thêm người dùng</button>
+          </div>
+          <!--  Thống kê -->
+          <div class="main-list">
+            <table class="table table-hover table-bordered">
+              <thead>
+                <tr class="danger">
+                  <th style="background-color: #f8d7da">STT</th>
+                  <th style="background-color: #f8d7da">Tên kỳ thi</th>
+                  <th style="background-color: #f8d7da">
+                    Số lượng người tham gia
+                  </th>
+                  <th style="background-color: #f8d7da">Tỷ lệ hoàn thành</th>
+                  <th style="background-color: #f8d7da">Điểm trung bình</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>1</td>
+                  <td>Luyện tập</td>
+                  <td>8</td>
+                  <td>98,89%</td>
+                  <td>7,6</td>
+                </tr>
+                <tr>
+                  <td>2</td>
+                  <td>Giữa kì</td>
+                  <td>6</td>
+                  <td>17,92%</td>
+                  <td>5,8</td>
+                </tr>
+                <tr>
+                  <td>3</td>
+                  <td>Cuối kì</td>
+                  <td>13</td>
+                  <td>38,86%</td>
+                  <td>8,4</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </div>
     </div>
-    <button id="addQuestionBtn">Thêm câu hỏi</button>
-</div>
-<script src="./assets/js/adminDashboard.js"></script>
-</body>
+
+    <!-- js -->
+    <script src="./assets/js/main.js"></script>
+    <script src="./assets/js/adminDashboard.js"></script>
+  </body>
 </html>

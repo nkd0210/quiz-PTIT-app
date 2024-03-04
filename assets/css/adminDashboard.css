@@ -1,0 +1,125 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-size: 16px;
+  line-height: 1.5;
+  font-family: var(--font-family-sans);
+  /* height: 10000px; */
+  background-color: #f6f8fa;
+}
+
+:root {
+  --clr-primary-1: #bb2019;
+  --clr-primary-2: #e1e4e8;
+  --clr-primary-3: #f8d7da;
+}
+
+.menu-user {
+  display: none;
+  position: absolute;
+  box-shadow: 0 2px 4px rgba(34, 25, 25, 0.4);
+  border-radius: 0;
+  z-index: 100;
+  top: 35px;
+  left: 315px;
+  width: 150px;
+  height: auto;
+  background-color: #fff;
+  font-size: 0.8rem;
+  border-radius: 2px;
+}
+
+.icon {
+  color: var(--clr-primary-1);
+  padding-right: 5px;
+}
+
+.dashboard-main {
+  background-color: #fff;
+  margin: 20px 10px 0px 10px;
+  padding-left: 1.2rem;
+  max-height: 540px;
+  overflow-x: scroll;
+}
+
+.main-navigation {
+  padding-top: 1rem;
+  border-bottom: 1px solid #e1e4e8;
+}
+
+.main-navigation ul {
+  display: flex;
+  align-items: flex-start;
+}
+
+.main-navigation ul li {
+  border: 1px solid #e1e4e8;
+  border-bottom: none;
+  border-radius: 2px;
+  padding: 5px 15px;
+  margin-right: 2px;
+}
+
+.main-navigation ul li:hover {
+  cursor: pointer;
+  background-color: #f6f8fa;
+}
+
+.main-navigation ul li.active {
+  background-color: #f6f8fa;
+  color: var(--clr-primary-1);
+}
+
+.main-navigation ul li.active .icon {
+  color: var(--clr-primary-1);
+}
+
+.main-navigation .icon {
+  color: #999;
+}
+
+.list-title {
+  font-size: 1.1rem;
+  font-weight: bold;
+  padding: 20px 0px;
+}
+
+.main-list {
+  display: none;
+}
+.danger {
+  background: var(--clr-primary-3);
+}
+.dashboard-list.active {
+  display: block;
+}
+.dashboard-btn {
+  border: none;
+  background-color: var(--clr-primary-1);
+  color: #fff;
+  border-radius: 2px;
+  padding: 3px 5px;
+  margin-bottom: 20px;
+}
+.edit-btn {
+  border: none;
+  background-color: lightblue;
+  color: #111;
+  border-radius: 2px;
+  padding: 3px 15px;
+  margin: 0px 5px;
+}
+.delete-btn {
+  border: none;
+  background-color: var(--clr-primary-1);
+  color: #fff;
+  border-radius: 2px;
+  padding: 3px 15px;
+  margin: 0px 5px;
+}
+.last-column {
+  display: flex;
+  justify-content: flex-end;
+}

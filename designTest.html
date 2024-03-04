@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Admin Dashboard</title>
+    <!-- bootstrap -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN"
+      crossorigin="anonymous"
+    />
+    <!-- css -->
+    <link rel="stylesheet" href="./assets/css/reset.css" />
+    <link rel="stylesheet" href="./assets/css/styles.css" />
+    <link rel="stylesheet" href="./assets/css/designTest.css" />
+    <link rel="stylesheet" href="./assets/css/responsive.css" />
+    <!-- font awesome -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+    />
+  </head>
+
+  <body>
+    <!-- HEADER NAVBAR -->
+    <div class="header-navbar">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-8">
+            <div class="left-side">
+              <!-- hidden navbar -->
+              <div class="navbar-btn hidden">
+                <i class="fa-solid fa-bars"></i>
+              </div>
+              <ul class="navbar-full-menu hidden">
+                <li class="exam-item">
+                  <a href="./adminDashboard.html">Dashboard Admin</a>
+                </li>
+                <li class="exam-item">
+                  <a href="./designTest.html">Tạo/Chỉnh sửa Kỳ thi</a>
+                </li>
+                <li class="exam-item">
+                  <a href="./thongKe.html">Thống kê</a>
+                </li>
+                <li class="exam-item">
+                  <a href="./ketquaSV.html">Kết Quả của Sinh Viên</a>
+                </li>
+                <br />
+                <!-- <hr /> -->
+                <br />
+                <li class="user-list">
+                  <a href="" class="user-name">Admin</a>
+                </li>
+                <li class="exam-item">
+                  <a href="">Hồ sơ</a>
+                </li>
+                <li class="exam-item">
+                  <a href="">Lớp học</a>
+                </li>
+                <li class="exam-item">
+                  <a href="">Đăng xuất</a>
+                </li>
+              </ul>
+              <div class="logo">
+                <img src="./assets/img/logo_ptit.png" alt="logo" />
+              </div>
+              <article class="navbar-item">
+                <a href="./adminDashboard.html">Dashboard Admin</a>
+              </article>
+              <article class="navbar-item exams">
+                <a href="./designTest.html">Tạo/Chỉnh sửa Kỳ thi</a>
+              </article>
+              <article class="navbar-item">
+                <a href="./thongKe.html"> Thống kê</a>
+              </article>
+              <article class="navbar-item">
+                <a href="./ketquaSV.html"> Kết Quả của Sinh Viên</a>
+              </article>
+            </div>
+          </div>
+          <div class="col-md-4">
+            <div class="right-side">
+              <div class="user">
+                <div class="user-logo">
+                  <img src="./assets/img/admin.jpg" alt="user logo" />
+                </div>
+                <button type="button" class="user-btn">
+                  <i class="user-icon fa-solid fa-sort-down"></i>
+                </button>
+                <div class="menu-user">
+                  <ul>
+                    <li class="user-list">
+                      <a href="" class="user-name">Admin</a>
+                    </li>
+                    <li class="user-list">
+                      <a href="">Hồ sơ</a>
+                    </li>
+                    <li class="user-list">
+                      <a href="">Lớp học</a>
+                    </li>
+                    <li class="user-list">
+                      <a href="./index.html">Đăng xuất</a>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- DESIGN BODY -->
+    <div class="container">
+      <h2 class="design-title">Tạo/ Chỉnh sửa bài kiểm tra</h2>
+      <form action="#" method="POST" class="design-form">
+        <label for="exam-name">Tên bài kiểm tra :</label>
+        <input
+          type="text"
+          id="exam-name"
+          name="exam-name"
+          placeholder="Nhập tên của bài kiểm tra"
+          required
+        />
+
+        <label for="description">Miêu tả :</label>
+        <textarea
+          id="description"
+          name="description"
+          placeholder="miêu tả đặc điểm của bài kiểm tra"
+          rows="3"
+        ></textarea>
+
+        <label for="exam-type">Trạng thái:</label>
+        <select id="exam-type" name="exam-type">
+          <option value="free">Không giới hạn thời gian</option>
+          <option value="timed">Giới hạn thời gian</option>
+        </select>
+
+        <h3>Danh sách câu hỏi</h3>
+        <div id="question-list">
+          <!-- Dynamic content for questions will be added here -->
+        </div>
+
+        <button type="button" id="add-question-btn">Thêm câu hỏi</button>
+
+        <input type="submit" value="Save" />
+      </form>
+
+      <input type="file" id="excel-file" accept=".xlsx" />
+      <button type="button" id="import-exam-btn">Import from Excel</button>
+    </div>
+
+    <!-- js -->
+    <script src="./assets/js/main.js"></script>
+    <script src="./assets/js/designTest.js"></script>
+  </body>
+</html>
