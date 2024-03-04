@@ -95,3 +95,10 @@ button:hover {
 .question button {
   margin-top: 10px;
 }
+
+@media (max-width: 992px) {
+  .menu-user.active {
+    top: 33px;
+    left: 115px;
+  }
+}

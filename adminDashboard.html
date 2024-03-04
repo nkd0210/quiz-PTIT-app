@@ -1,115 +1,117 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Admin Dashboard</title>
-  <!-- bootstrap -->
-  <link
-    href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css"
-    rel="stylesheet"
-    integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN"
-    crossorigin="anonymous"
-  />
-  <!-- css -->
-  <link rel="stylesheet" href="./assets/css/reset.css" />
-  <link rel="stylesheet" href="./assets/css/styles.css" />
-  <link rel="stylesheet" href="./assets/css/profile.css" />
-  <link rel="stylesheet" href="./assets/css/adminDashboard.css" />
-  <link rel="stylesheet" href="./assets/css/responsive.css" />
-  <!-- font awesome -->
-  <link
-    rel="stylesheet"
-    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
-  />
-</head>
-<body>
-  <!-- HEADER NAVBAR -->
-  <div class="header-navbar">
-    <div class="container">
-      <div class="row">
-        <div class="col-md-8">
-          <div class="left-side">
-            <!-- hidden navbar -->
-            <div class="navbar-btn hidden">
-              <i class="fa-solid fa-bars"></i>
-            </div>
-            <ul class="navbar-full-menu hidden">
-              <li class="exam-item">
-                <a href="./adminDashboard.html">Dashboard Admin</a>
-              </li>
-              <li class="exam-item">
-                <a href="./designTest.html">Tạo/Chỉnh sửa Kỳ thi</a>
-              </li>
-              <li class="exam-item">
-                <a href="./thongKe.html">Thống kê</a>
-              </li>
-              <li class="exam-item">
-                <a href="./ketquaSV.html">Kết Quả của Sinh Viên</a>
-              </li>
-              <br />
-              <br />
-              <li class="user-list">
-                <a href="" class="user-name">Admin</a>
-              </li>
-              <li class="exam-item">
-                <a href="">Hồ sơ</a>
-              </li>
-              <li class="exam-item">
-                <a href="">Lớp học</a>
-              </li>
-              <li class="exam-item">
-                <a href="">Đăng xuất</a>
-              </li>
-            </ul>
-            <div class="logo">
-              <img src="./assets/img/logo_ptit.png" alt="logo" />
-            </div>
-            <article class="navbar-item">
-              <a href="./adminDashboard.html">Dashboard Admin</a>
-            </article>
-            <article class="navbar-item exams">
-              <a href="./designTest.html">Tạo/Chỉnh sửa Kỳ thi</a>
-            </article>
-            <article class="navbar-item">
-              <a href="./thongKe.html"> Thống kê</a>
-            </article>
-            <article class="navbar-item">
-              <a href="./ketquaSV.html"> Kết Quả của Sinh Viên</a>
-            </article>
-          </div>
-        </div>
-        <div class="col-md-4">
-          <div class="right-side">
-            <div class="user">
-              <div class="user-logo">
-                <img src="./assets/img/admin.jpg" alt="user logo" />
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Admin Dashboard</title>
+    <!-- bootstrap -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN"
+      crossorigin="anonymous"
+    />
+    <!-- css -->
+    <link rel="stylesheet" href="./assets/css/reset.css" />
+    <link rel="stylesheet" href="./assets/css/styles.css" />
+    <link rel="stylesheet" href="./assets/css/profile.css" />
+    <link rel="stylesheet" href="./assets/css/adminDashboard.css" />
+    <link rel="stylesheet" href="./assets/css/responsive.css" />
+    <!-- font awesome -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+    />
+  </head>
+
+  <body>
+    <!-- HEADER NAVBAR -->
+    <div class="header-navbar">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-8">
+            <div class="left-side">
+              <!-- hidden navbar -->
+              <div class="navbar-btn hidden">
+                <i class="fa-solid fa-bars"></i>
               </div>
-              <button type="button" class="user-btn">
-                <i class="user-icon fa-solid fa-sort-down"></i>
-              </button>
-              <div class="menu-user">
-                <ul>
-                  <li class="user-list">
-                    <a href="" class="user-name">Admin</a>
-                  </li>
-                  <li class="user-list">
-                    <a href="">Hồ sơ</a>
-                  </li>
-                  <li class="user-list">
-                    <a href="">Lớp học</a>
-                  </li>
-                  <li class="user-list">
-                    <a href="./index.html">Đăng xuất</a>
-                  </li>
-                </ul>
+              <ul class="navbar-full-menu hidden">
+                <li class="exam-item">
+                  <a href="./adminDashboard.html">Dashboard Admin</a>
+                </li>
+                <li class="exam-item">
+                  <a href="./designTest.html">Tạo/Chỉnh sửa Kỳ thi</a>
+                </li>
+                <li class="exam-item">
+                  <a href="./thongKe.html">Thống kê</a>
+                </li>
+                <li class="exam-item">
+                  <a href="./ketquaSV.html">Kết Quả của Sinh Viên</a>
+                </li>
+                <br />
+                <!-- <hr /> -->
+                <br />
+                <li class="user-list">
+                  <a href="" class="user-name">Admin</a>
+                </li>
+                <li class="exam-item">
+                  <a href="">Hồ sơ</a>
+                </li>
+                <li class="exam-item">
+                  <a href="">Lớp học</a>
+                </li>
+                <li class="exam-item">
+                  <a href="">Đăng xuất</a>
+                </li>
+              </ul>
+              <div class="logo">
+                <img src="./assets/img/logo_ptit.png" alt="logo" />
+              </div>
+              <article class="navbar-item">
+                <a href="./adminDashboard.html">Dashboard Admin</a>
+              </article>
+              <article class="navbar-item exams">
+                <a href="./designTest.html">Tạo/Chỉnh sửa Kỳ thi</a>
+              </article>
+              <article class="navbar-item">
+                <a href="./thongKe.html"> Thống kê</a>
+              </article>
+              <article class="navbar-item">
+                <a href="./ketquaSV.html"> Kết Quả của Sinh Viên</a>
+              </article>
+            </div>
+          </div>
+          <div class="col-md-4">
+            <div class="right-side">
+              <div class="user">
+                <div class="user-logo">
+                  <img src="./assets/img/admin.jpg" alt="user logo" />
+                </div>
+                <button type="button" class="user-btn">
+                  <i class="user-icon fa-solid fa-sort-down"></i>
+                </button>
+                <div class="menu-user">
+                  <ul>
+                    <li class="user-list">
+                      <a href="" class="user-name">Admin</a>
+                    </li>
+                    <li class="user-list">
+                      <a href="">Hồ sơ</a>
+                    </li>
+                    <li class="user-list">
+                      <a href="">Lớp học</a>
+                    </li>
+                    <li class="user-list">
+                      <a href="./index.html">Đăng xuất</a>
+                    </li>
+                  </ul>
+                </div>
               </div>
             </div>
           </div>
         </div>
       </div>
     </div>
-  </div>
 
   <!-- MAIN NAVIGATION -->
   <div class="main-navigation">
