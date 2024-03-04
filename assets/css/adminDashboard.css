@@ -89,6 +89,9 @@ body {
 .main-list {
   display: none;
 }
+.main-list.active {
+  display: block;
+}
 .danger {
   background: var(--clr-primary-3);
 }
@@ -122,4 +125,20 @@ body {
 .last-column {
   display: flex;
   justify-content: flex-end;
+}
+
+@media (max-width: 992px) {
+  .menu-user.active {
+    top: 33px;
+    left: 115px;
+  }
+}
+@media (max-width: 576px) {
+  .tab-item {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+  }
 }
