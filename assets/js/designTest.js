@@ -6,6 +6,12 @@ document.addEventListener("DOMContentLoaded", function () {
       addQuestion();
     });
 
+  var showListQuestion = document.getElementById("show-all-question");
+  showListQuestion.onclick = (e) => {
+    e.preventDefault();
+    window.location.href="showListQuestion.html"
+  }
+
   // Function to add a multiple-choice question with four answer choices
   function addQuestion() {
     var questionList = document.getElementById("question-list");
