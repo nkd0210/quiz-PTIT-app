@@ -12,3 +12,9 @@ tabs.forEach(function (tab, index) {
     list.classList.add("active");
   };
 });
+
+document.addEventListener("DOMContentLoaded", function () {
+  const studentName = localStorage.getItem("studentName");
+  const singleName = document.querySelector(".singleName");
+  singleName.textContent = `Hồ sơ sinh viên: ${studentName}`;
+});
