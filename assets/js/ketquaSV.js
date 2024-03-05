@@ -18,7 +18,7 @@ function populateTable(data) {
     `;
     tableBody.appendChild(row);
   });
-  addClickEventToShowButtons(); 
+  addClickEventToShowButtons(); // Thêm sự kiện click cho các nút "Xem chi tiết"
 }
 
 function addClickEventToShowButtons() {
@@ -26,8 +26,8 @@ function addClickEventToShowButtons() {
   showButtons.forEach(button => {
     button.addEventListener("click", () => {
       const studentName = button.getAttribute("data-name");
-      localStorage.setItem("studentName", studentName);
-      window.location.href = "singleStudent.html";
+      localStorage.setItem("studentName", studentName); // Lưu tên sinh viên vào localStorage
+      window.location.href = "singleStudent.html"; // Chuyển hướng đến trang singleStudent.html
     });
   });
 }
@@ -38,6 +38,10 @@ const hiddenBody = document.querySelector(".statistic-body");
 answerBtn.addEventListener("click", (e) => {
   e.preventDefault();
   hiddenBody.classList.remove("hidden");
+  const searchTerm = input.value.toLowerCase();
+  if (!searchTerm) { // Nếu không có input để lọc, hiển thị toàn bộ dữ liệu
+    populateTable(data);
+  }
 });
 
 const input = document.getElementById("myInput");
