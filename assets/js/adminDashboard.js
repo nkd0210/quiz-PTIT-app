@@ -58,6 +58,12 @@ function populateExamTable() {
     `;
     examTableBody.appendChild(row);
 
+    const editBtn = row.querySelector(".edit-btn");
+    editBtn.addEventListener("click", () => {
+      // Redirect to designTest.html with exam id as query parameter
+      window.location.href = "designTest.html";
+    });
+
     const deleteBtn = row.querySelector(".delete-btn");
     deleteBtn.addEventListener("click", () => {
       const index = data.exams.findIndex((item) => item.id === exam.id);
