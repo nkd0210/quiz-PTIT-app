@@ -5,17 +5,17 @@ const data = {
     { id: 3, name: "Giữa kì", status: "Giới hạn thời gian" },
   ],
   users: [
-    { id: 1, name: "Kim Dũng" },
-    { id: 2, name: "Nam Anh" },
-    { id: 3, name: "Công Bách" },
-    { id: 4, name: "Ngọc Long" },
-    { id: 5, name: "Tùng Anh" },
-    { id: 6, name: "Bình Minh" },
-    { id: 7, name: "Tùng Lâm" },
-    { id: 8, name: "Huy Hoàng" },
-    { id: 9, name: "Khánh Linh" },
-    { id: 10, name: "Trung Hiếu" },
-    { id: 11, name: "Tuấn Hiệp" },
+    { id: 1, name: "Kim Dũng", MSV: "B21DCVT018" },
+    { id: 2, name: "Nam Anh", MSV: "B21DCVT019" },
+    { id: 3, name: "Công Bách", MSV: "B21DCVT022" },
+    { id: 4, name: "Ngọc Long", MSV: "B21DCVT044" },
+    { id: 5, name: "Tùng Anh", MSV: "B21DCVT028" },
+    { id: 6, name: "Bình Minh", MSV: "B21DCVT123" },
+    { id: 7, name: "Tùng Lâm", MSV: "B21DCVT034" },
+    { id: 8, name: "Huy Hoàng", MSV: "B21DCVT224" },
+    { id: 9, name: "Khánh Linh", MSV: "B21DCVT009" },
+    { id: 10, name: "Trung Hiếu", MSV: "B21DCVT028" },
+    { id: 11, name: "Tuấn Hiệp", MSV: "B21DCVT048" },
   ],
   statistics: [
     {
@@ -90,6 +90,8 @@ function populateUserTable() {
     row.innerHTML = `
       <td>${user.id}</td>
       <td>${user.name}</td>
+      <td>${user.MSV}</td>
+
       <td class="last-column">
         <button class="edit-btn">Edit</button>
         <button class="delete-btn">Delete</button>
