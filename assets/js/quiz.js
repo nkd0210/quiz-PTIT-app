@@ -1,7 +1,7 @@
 document.addEventListener("DOMContentLoaded", function () {
   let correctAnswersCount = 0;
   let selectedAnswers = [];
-  let submitted = false;
+  let flaggedQuestions = [];
 
   // Function to start countdown timer
   function startTimer(duration, display) {
@@ -18,8 +18,10 @@ document.addEventListener("DOMContentLoaded", function () {
       display.textContent = minutes + ":" + seconds;
 
       if (--timer < 0) {
+        alert("Hết thời gian làm bài!");
         window.location.href = "./chamdiem.html";
-      }
+    }
+    
     }, 1000);
   }
 
@@ -33,6 +35,8 @@ document.addEventListener("DOMContentLoaded", function () {
     .then((response) => response.json())
     .then((data) => {
       const questionsContainer = document.querySelector(".questions-container");
+      const ticketButtons = document.querySelectorAll(".ticket-item");
+
       const shuffledQuestions = data.sort(() => Math.random() - 0.5);
       const selectedQuestions = shuffledQuestions.slice(0, 15);
 
@@ -91,12 +95,34 @@ document.addEventListener("DOMContentLoaded", function () {
             if (selectedAnswerIndex === correctAnswerIndex) {
               correctAnswersCount++;
             }
+
+            updateTicketButtons(); // Update ticket buttons after selecting an answer
           });
         });
 
         const flagIcon = questionDiv.querySelector(".exam-icon");
         flagIcon.addEventListener("click", () => {
           flagIcon.classList.toggle("active");
+
+          const questionIndex = parseInt(questionDiv.querySelector('.exam-title').textContent.replace("Câu hỏi ", "")) - 1;
+
+          if (flagIcon.classList.contains("active")) {
+            flaggedQuestions.push(questionIndex);
+          } else {
+            const index = flaggedQuestions.indexOf(questionIndex);
+            if (index > -1) {
+              flaggedQuestions.splice(index, 1);
+            }
+          }
+
+          updateTicketButtons(); // Update ticket buttons after flagging/unflagging a question
+        });
+      });
+
+      // Scroll to the specific question's section when the button is clicked
+      ticketButtons.forEach((button, index) => {
+        button.addEventListener("click", () => {
+          questionsContainer.querySelector(`.exam-single-answer:nth-child(${index + 1})`).scrollIntoView({ behavior: "smooth" });
         });
       });
     })
@@ -108,6 +134,20 @@ document.addEventListener("DOMContentLoaded", function () {
     localStorage.setItem("correctAnswersCount", correctAnswersCount);
     window.location.href = "./chamdiem.html";
   });
+
+  function updateTicketButtons() {
+    const ticketButtons = document.querySelectorAll(".ticket-item");
+
+    ticketButtons.forEach((button, index) => {
+      const questionIndex = index;
+      const selected = selectedAnswers.includes(questionIndex);
+      const flagged = flaggedQuestions.includes(questionIndex);
+
+      button.classList.toggle("selected", selected);
+      button.classList.toggle("flagged", flagged);
+        
+    });
+  }
 
   function gradeExam() {
     console.log(`Số câu trả lời đúng: ${correctAnswersCount}`);
