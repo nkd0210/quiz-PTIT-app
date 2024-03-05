@@ -37,16 +37,16 @@
               </div>
               <ul class="navbar-full-menu hidden">
                 <li class="exam-item">
-                  <a href="./adminDashboard.html">Dashboard Admin</a>
+                  <a href="./adminDashboard.html">Dashboard</a>
                 </li>
                 <li class="exam-item">
-                  <a href="./designTest.html">Tạo/Chỉnh sửa Kỳ thi</a>
+                  <a href="./designTest.html"> Kỳ thi</a>
                 </li>
                 <li class="exam-item">
                   <a href="./thongKe.html">Thống kê</a>
                 </li>
                 <li class="exam-item">
-                  <a href="./ketquaSV.html">Kết Quả của Sinh Viên</a>
+                  <a href="./ketquaSV.html">Kết Quả </a>
                 </li>
                 <br />
                 <!-- <hr /> -->
@@ -55,29 +55,23 @@
                   <a href="" class="user-name">Admin</a>
                 </li>
                 <li class="exam-item">
-                  <a href="">Hồ sơ</a>
-                </li>
-                <li class="exam-item">
-                  <a href="">Lớp học</a>
-                </li>
-                <li class="exam-item">
-                  <a href="">Đăng xuất</a>
+                  <a href="./index.html">Đăng xuất</a>
                 </li>
               </ul>
               <div class="logo">
                 <img src="./assets/img/logo_ptit.png" alt="logo" />
               </div>
               <article class="navbar-item">
-                <a href="./adminDashboard.html">Dashboard Admin</a>
+                <a href="./adminDashboard.html"> Dashboard</a>
               </article>
               <article class="navbar-item exams">
-                <a href="./designTest.html">Tạo/Chỉnh sửa Kỳ thi</a>
+                <a href="./designTest.html">Kỳ thi</a>
               </article>
               <article class="navbar-item">
                 <a href="./thongKe.html"> Thống kê</a>
               </article>
               <article class="navbar-item">
-                <a href="./ketquaSV.html"> Kết Quả của Sinh Viên</a>
+                <a href="./ketquaSV.html"> Kết Quả</a>
               </article>
             </div>
           </div>
@@ -96,12 +90,6 @@
                       <a href="" class="user-name">Admin</a>
                     </li>
                     <li class="user-list">
-                      <a href="">Hồ sơ</a>
-                    </li>
-                    <li class="user-list">
-                      <a href="">Lớp học</a>
-                    </li>
-                    <li class="user-list">
                       <a href="./index.html">Đăng xuất</a>
                     </li>
                   </ul>
@@ -113,86 +101,94 @@
       </div>
     </div>
 
-  <!-- MAIN NAVIGATION -->
-  <div class="main-navigation container">
-    <ul>
-      <li class="tab-item active">
-        <i class="icon fa-solid fa-book-open"></i>
-        Danh sách các kỳ thi
-      </li>
-      <li class="tab-item">
-        <i class="icon fa-solid fa-book-open"></i>
-        Danh sách người dùng
-      </li>
-      <li class="tab-item">
-        <i class="icon fa-solid fa-book-open"></i>
-        Thống kê
-      </li>
-    </ul>
-  </div>
-
-  <!-- BODY -->
-  <div class="dashboard-content">
-    <div class="container">
-      <div class="dashboard-main">
-        <!-- Danh sách các kỳ thi -->
-        <div class="main-list active">
-          <table class="table table-hover table-bordered">
-            <thead>
-              <tr class="danger">
-                <th style="background-color: #f8d7da">STT</th>
-                <th style="background-color: #f8d7da">Tên bài thi</th>
-                <th style="background-color: #f8d7da">Trạng thái</th>
-                <th style="background-color: #f8d7da"></th>
-              </tr>
-            </thead>
-            <tbody id="exam-table-body">
-              <!-- Exam table body will be populated dynamically -->
-            </tbody>
-          </table>
-          <button class="dashboard-btn">Thêm bài thi</button>
-        </div>
-
-        <!-- Danh sách người dùng -->
-        <div class="main-list">
-          <table class="table table-hover table-bordered">
-            <thead>
-              <tr class="danger">
-                <th style="background-color: #f8d7da">STT</th>
-                <th style="background-color: #f8d7da">Tên người dùng</th>
-                <th style="background-color: #f8d7da"></th>
-              </tr>
-            </thead>
-            <tbody id="user-table-body">
-              <!-- User table body will be populated dynamically -->
-            </tbody>
-          </table>
-          <button class="dashboard-btn" id="createExamBtn">Thêm người dùng</button>
-        </div>
-
-        <!-- Thống kê -->
-        <div class="main-list">
-          <table class="table table-hover table-bordered">
-            <thead>
-              <tr class="danger">
-                <th style="background-color: #f8d7da">STT</th>
-                <th style="background-color: #f8d7da">Tên kỳ thi</th>
-                <th style="background-color: #f8d7da">Số lượng người tham gia</th>
-                <th style="background-color: #f8d7da">Tỷ lệ hoàn thành</th>
-                <th style="background-color: #f8d7da">Điểm trung bình</th>
-              </tr>
-            </thead>
-            <tbody id="stats-table-body">
-              <!-- Stats table body will be populated dynamically -->
-            </tbody>
-          </table>
+    <!-- MAIN NAVIGATION -->
+    <div class="admin-navigation">
+      <div class="container">
+        <div class="admin-main-navigation">
+          <ul>
+            <li class="tab-item active">
+              <i class="icon fa-solid fa-book-open"></i>
+              Danh sách các kỳ thi
+            </li>
+            <li class="tab-item">
+              <i class="icon fa-solid fa-book-open"></i>
+              Danh sách người dùng
+            </li>
+            <li class="tab-item">
+              <i class="icon fa-solid fa-book-open"></i>
+              Thống kê
+            </li>
+          </ul>
         </div>
       </div>
     </div>
-  </div>
 
-  <!-- js -->
-  <script src="./assets/js/main.js"></script>
-  <script src="./assets/js/adminDashboard.js"></script>
-</body>
+    <!-- BODY -->
+    <div class="dashboard-content">
+      <div class="container">
+        <div class="dashboard-main">
+          <!-- Danh sách các kỳ thi -->
+          <div class="main-list active">
+            <table class="table table-hover table-bordered">
+              <thead>
+                <tr class="danger">
+                  <th style="background-color: #f8d7da">STT</th>
+                  <th style="background-color: #f8d7da">Tên bài thi</th>
+                  <th style="background-color: #f8d7da">Trạng thái</th>
+                  <th style="background-color: #f8d7da"></th>
+                </tr>
+              </thead>
+              <tbody id="exam-table-body">
+                <!-- Exam table body will be populated dynamically -->
+              </tbody>
+            </table>
+            <button class="dashboard-btn" id="createExamBtn">
+              Thêm bài thi
+            </button>
+          </div>
+
+          <!-- Danh sách người dùng -->
+          <div class="main-list">
+            <table class="table table-hover table-bordered">
+              <thead>
+                <tr class="danger">
+                  <th style="background-color: #f8d7da">STT</th>
+                  <th style="background-color: #f8d7da">Tên người dùng</th>
+                  <th style="background-color: #f8d7da"></th>
+                </tr>
+              </thead>
+              <tbody id="user-table-body">
+                <!-- User table body will be populated dynamically -->
+              </tbody>
+            </table>
+            <button class="addUserBtn">Thêm người dùng</button>
+          </div>
+
+          <!-- Thống kê -->
+          <div class="main-list">
+            <table class="table table-hover table-bordered">
+              <thead>
+                <tr class="danger">
+                  <th style="background-color: #f8d7da">STT</th>
+                  <th style="background-color: #f8d7da">Tên kỳ thi</th>
+                  <th style="background-color: #f8d7da">
+                    Số lượng người tham gia
+                  </th>
+                  <th style="background-color: #f8d7da">Tỷ lệ hoàn thành</th>
+                  <th style="background-color: #f8d7da">Điểm trung bình</th>
+                </tr>
+              </thead>
+              <tbody id="stats-table-body">
+                <!-- Stats table body will be populated dynamically -->
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- js -->
+    <script src="./assets/js/main.js"></script>
+    <script src="./assets/js/adminDashboard.js"></script>
+  </body>
 </html>

@@ -76,8 +76,9 @@ body {
 }
 .time {
   color: #666;
+  border-radius: 3px;
   padding-left: 20px;
-  border: 1px solid var(--clr-primary-1);
+  border: 2px solid var(--clr-primary-1);
 }
 .exam-answer {
   border: 1px solid var(--clr-primary-2);

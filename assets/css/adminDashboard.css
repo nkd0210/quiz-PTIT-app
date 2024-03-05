@@ -38,23 +38,25 @@ body {
 
 .dashboard-main {
   background-color: #fff;
-  margin: 20px 10px 0px 10px;
-  padding-left: 1.2rem;
+  /* margin: 20px 10px 0px 10px; */
+  /* padding-left: 1.2rem; */
   max-height: 540px;
   overflow-x: scroll;
+  border-bottom-left-radius: 5px;
+  border-bottom-right-radius: 5px;
 }
 
-.main-navigation {
+.admin-main-navigation {
   padding-top: 1rem;
-  border-bottom: 1px solid #e1e4e8;
+  /* border-bottom: 1px solid #e1e4e8; */
 }
 
-.main-navigation ul {
+.admin-main-navigation ul {
   display: flex;
   align-items: flex-start;
 }
 
-.main-navigation ul li {
+.admin-main-navigation ul li {
   border: 1px solid #e1e4e8;
   border-bottom: none;
   border-radius: 2px;
@@ -62,21 +64,21 @@ body {
   margin-right: 2px;
 }
 
-.main-navigation ul li:hover {
+.admin-main-navigation ul li:hover {
   cursor: pointer;
   background-color: #f6f8fa;
 }
 
-.main-navigation ul li.active {
+.admin-main-navigation ul li.active {
   background-color: #f6f8fa;
   color: var(--clr-primary-1);
 }
 
-.main-navigation ul li.active .icon {
+.admin-main-navigation ul li.active .icon {
   color: var(--clr-primary-1);
 }
 
-.main-navigation .icon {
+.admin-main-navigation .icon {
   color: #999;
 }
 
@@ -104,6 +106,7 @@ body {
   color: #fff;
   border-radius: 2px;
   padding: 3px 5px;
+  margin-left: 10px;
   margin-bottom: 20px;
 }
 
@@ -132,13 +135,36 @@ body {
 
 .tab-item {
   padding: 10px 20px;
-  border: 1px solid #e1e4e8;
+  /* border: 1px solid #e1e4e8; */
   border-bottom: none;
   border-radius: 2px 2px 0 0;
   cursor: pointer;
 }
-
+.addUserBtn {
+  border: none;
+  background-color: var(--clr-primary-1);
+  color: #fff;
+  border-radius: 2px;
+  padding: 3px 5px;
+  margin-left: 10px;
+  margin-bottom: 20px;
+}
 .tab-item.active {
   background-color: #f6f8fa;
   color: var(--clr-primary-1);
+}
+@media (max-width: 992px) {
+  .menu-user.active {
+    top: 33px;
+    left: 115px;
+  }
+}
+@media (max-width: 576px) {
+  .tab-item {
+    display: flex;
+    flex-direction: column;
+    align-content: center;
+    justify-content: center;
+    text-align: center;
+  }
 }

@@ -14,7 +14,7 @@
     <!-- css -->
     <link rel="stylesheet" href="./assets/css/reset.css" />
     <link rel="stylesheet" href="./assets/css/styles.css" />
-    <link rel="stylesheet" href="./assets/css/thongKe.css" />
+    <link rel="stylesheet" href="./assets/css/createUser.css" />
     <link rel="stylesheet" href="./assets/css/responsive.css" />
     <!-- font awesome -->
     <link
@@ -54,11 +54,11 @@
                   <a href="" class="user-name">Admin</a>
                 </li>
                 <!-- <li class="exam-item">
-                  <a href="">Hồ sơ</a>
-                </li>
-                <li class="exam-item">
-                  <a href="">Lớp học</a>
-                </li> -->
+                    <a href="">Hồ sơ</a>
+                  </li>
+                  <li class="exam-item">
+                    <a href="">Lớp học</a>
+                  </li> -->
                 <li class="exam-item">
                   <a href="">Đăng xuất</a>
                 </li>
@@ -95,11 +95,11 @@
                       <a href="" class="user-name">Admin</a>
                     </li>
                     <!-- <li class="user-list">
-                      <a href="">Hồ sơ</a>
-                    </li>
-                    <li class="user-list">
-                      <a href="">Lớp học</a>
-                    </li> -->
+                        <a href="">Hồ sơ</a>
+                      </li>
+                      <li class="user-list">
+                        <a href="">Lớp học</a>
+                      </li> -->
                     <li class="user-list">
                       <a href="./index.html">Đăng xuất</a>
                     </li>
@@ -112,61 +112,48 @@
       </div>
     </div>
 
-    <!-- THONG KE BODY -->
-    <div class="statistic">
+    <!-- BODY -->
+    <div class="createUser">
       <div class="container">
-        <div class="statistic-title">THỐNG KÊ</div>
-        <div class="statistic-form">
-          <label>Kỳ thi</label>
-          <select id="exam-select">
-            <option value="exam1">Luyện tập</option>
-            <option value="exam2">Giữa kì</option>
-            <option value="exam3">Cuối kì</option>
-          </select>
-          <label for="date-select">Select Date:</label>
-          <input type="date" id="date-select" />
-        </div>
-        <div class="statistic-body">
-          <table class="table table-hover table-bordered">
-            <thead>
-              <tr class="danger">
-                <th style="background-color: #f8d7da">STT</th>
-                <th style="background-color: #f8d7da">Tên bài kiểm tra</th>
-                <th style="background-color: #f8d7da">Tổng số lần tham gia</th>
-                <th style="background-color: #f8d7da">Tỷ lệ hoàn thành</th>
-                <th style="background-color: #f8d7da">Điểm trung bình</th>
-              </tr>
-            </thead>
-            <tbody>
-              <tr>
-                <td>1</td>
-                <td>Luyện tập</td>
-                <td>153</td>
-                <td>89,98%</td>
-                <td>8,92</td>
-              </tr>
-              <tr>
-                <td>2</td>
-                <td>Giữa kì</td>
-                <td>233</td>
-                <td>54,34%</td>
-                <td>3,93</td>
-              </tr>
-              <tr>
-                <td>3</td>
-                <td>Cuối kì</td>
-                <td>145</td>
-                <td>83,11%</td>
-                <td>8,96</td>
-              </tr>
-            </tbody>
-          </table>
+        <div class="createUserBody">
+          <div class="createUseTitle">Create User</div>
+          <form action="./adminDashboard.html">
+            <div class="mb-3 mt-3">
+              <label for="email" class="form-label">Họ và tên:</label>
+              <input
+                type="text"
+                class="form-control"
+                id="email"
+                placeholder="Enter name"
+                name="email"
+              />
+            </div>
+            <div class="mb-3">
+              <label for="pwd" class="form-label">Mã sinh viên:</label>
+              <input
+                type="text"
+                class="form-control"
+                id="pwd"
+                placeholder="Enter student ID"
+                name="pswd"
+              />
+            </div>
+            <div class="mb-3">
+              <label for="pwd" class="form-label">Lớp:</label>
+              <input
+                type="text"
+                class="form-control"
+                id="pwd"
+                placeholder="Enter class"
+                name="pswd"
+              />
+            </div>
+            <button type="submit" class="btn btn-danger">Submit</button>
+          </form>
         </div>
       </div>
     </div>
-
     <!-- js -->
     <script src="./assets/js/main.js"></script>
-    <script src="./assets/js/thongKe.js"></script>
   </body>
 </html>
