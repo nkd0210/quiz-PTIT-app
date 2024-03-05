@@ -18,9 +18,19 @@ function populateTable(data) {
     `;
     tableBody.appendChild(row);
   });
+  addClickEventToShowButtons(); 
 }
 
-populateTable(data);
+function addClickEventToShowButtons() {
+  const showButtons = document.querySelectorAll(".show-btn");
+  showButtons.forEach(button => {
+    button.addEventListener("click", () => {
+      const studentName = button.getAttribute("data-name");
+      localStorage.setItem("studentName", studentName);
+      window.location.href = "singleStudent.html";
+    });
+  });
+}
 
 const answerBtn = document.querySelector(".answer-btn");
 const hiddenBody = document.querySelector(".statistic-body");
@@ -37,13 +47,4 @@ input.addEventListener("input", () => {
     return student.name.toLowerCase().includes(searchTerm) || student.msv.toLowerCase().includes(searchTerm);
   });
   populateTable(filteredData);
-});
-
-const showButtons = document.querySelectorAll(".show-btn");
-showButtons.forEach(button => {
-  button.addEventListener("click", () => {
-    const studentName = button.getAttribute("data-name");
-    localStorage.setItem("studentName", studentName); // Lưu tên sinh viên vào localStorage
-    window.location.href = "singleStudent.html"; // Chuyển hướng đến trang singleStudent.html
-  });
 });
