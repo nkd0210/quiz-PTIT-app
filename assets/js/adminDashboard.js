@@ -24,6 +24,7 @@ const data = {
       participants: 8,
       completionRate: "98,89%",
       averageScore: "7,6",
+      distribution: "7,2  --  8,6",
     },
     {
       id: 2,
@@ -31,6 +32,7 @@ const data = {
       participants: 6,
       completionRate: "17,92%",
       averageScore: "5,8",
+      distribution: "5,2  --  6,4",
     },
     {
       id: 3,
@@ -38,6 +40,7 @@ const data = {
       participants: 13,
       completionRate: "38,86%",
       averageScore: "8,4",
+      distribution: "6,7  --  8,0",
     },
   ],
 };
@@ -75,7 +78,6 @@ function populateExamTable() {
   });
 }
 
-
 document.addEventListener("DOMContentLoaded", function () {
   populateExamTable();
 });
@@ -106,7 +108,6 @@ function populateUserTable() {
   });
 }
 
-
 function populateStatsTable() {
   const statsTableBody = document.getElementById("stats-table-body");
   statsTableBody.innerHTML = "";
@@ -118,6 +119,8 @@ function populateStatsTable() {
       <td>${stat.participants}</td>
       <td>${stat.completionRate}</td>
       <td>${stat.averageScore}</td>
+      <td>${stat.distribution}</td>
+
     `;
     statsTableBody.appendChild(row);
   });

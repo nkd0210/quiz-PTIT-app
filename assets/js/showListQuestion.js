@@ -371,6 +371,7 @@ function populateQuestionTable() {
           <td>${item.choices[1]}</td>
           <td>${item.choices[2]}</td>
           <td>${item.choices[3]}</td>  
+          <td>${item.answer}</td>  
       `;
     questionTableBody.appendChild(row);
   });
