@@ -5,17 +5,17 @@ const data = {
     { id: 3, name: "Giữa kì", status: "Giới hạn thời gian" },
   ],
   users: [
-    { id: 1, name: "Kim Dũng", MSV: "B21DCVT018" },
-    { id: 2, name: "Nam Anh", MSV: "B21DCVT019" },
-    { id: 3, name: "Công Bách", MSV: "B21DCVT022" },
-    { id: 4, name: "Ngọc Long", MSV: "B21DCVT044" },
-    { id: 5, name: "Tùng Anh", MSV: "B21DCVT028" },
-    { id: 6, name: "Bình Minh", MSV: "B21DCVT123" },
-    { id: 7, name: "Tùng Lâm", MSV: "B21DCVT034" },
-    { id: 8, name: "Huy Hoàng", MSV: "B21DCVT224" },
-    { id: 9, name: "Khánh Linh", MSV: "B21DCVT009" },
-    { id: 10, name: "Trung Hiếu", MSV: "B21DCVT028" },
-    { id: 11, name: "Tuấn Hiệp", MSV: "B21DCVT048" },
+    { id: 1, name: "Kim Dũng", MSV: "B21DCVT018", class: "E21CQCN02-B" },
+    { id: 2, name: "Nam Anh", MSV: "B21DCVT019", class: "E21CQCN02-B" },
+    { id: 3, name: "Công Bách", MSV: "B21DCVT022", class: "E21CQCN02-B" },
+    { id: 4, name: "Ngọc Long", MSV: "B21DCVT044", class: "E21CQCN02-B" },
+    { id: 5, name: "Tùng Anh", MSV: "B21DCVT028", class: "E21CQCN02-B" },
+    { id: 6, name: "Bình Minh", MSV: "B21DCVT123", class: "E21CQCN02-B" },
+    { id: 7, name: "Tùng Lâm", MSV: "B21DCVT034", class: "E21CQCN02-B" },
+    { id: 8, name: "Huy Hoàng", MSV: "B21DCVT224", class: "E21CQCN02-B" },
+    { id: 9, name: "Khánh Linh", MSV: "B21DCVT009", class: "E21CQCN02-B" },
+    { id: 10, name: "Trung Hiếu", MSV: "B21DCVT028", class: "E21CQCN02-B" },
+    { id: 11, name: "Tuấn Hiệp", MSV: "B21DCVT048", class: "E21CQCN02-B" },
   ],
   statistics: [
     {
@@ -91,6 +91,7 @@ function populateUserTable() {
       <td>${user.id}</td>
       <td>${user.name}</td>
       <td>${user.MSV}</td>
+      <td>${user.class}</td>
 
       <td class="last-column">
         <button class="edit-btn">Edit</button>
@@ -99,6 +100,11 @@ function populateUserTable() {
     `;
     userTableBody.appendChild(row);
 
+    const editBtn = row.querySelector(".edit-btn");
+    editBtn.addEventListener("click", () => {
+      // Redirect to designTest.html with exam id as query parameter
+      window.location.href = "editUser.html";
+    });
     const deleteBtn = row.querySelector(".delete-btn");
     deleteBtn.addEventListener("click", () => {
       const index = data.users.findIndex((item) => item.id === user.id);
