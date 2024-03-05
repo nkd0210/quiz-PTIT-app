@@ -1,0 +1,116 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-size: 16px;
+  line-height: 1.5;
+  font-family: var(--font-family-sans);
+  /* height: 10000px; */
+  background-color: #f6f8fa;
+}
+
+:root {
+  --clr-primary-1: #bb2019;
+  --clr-primary-2: #e1e4e8;
+  --clr-primary-3: #f8d7da;
+}
+
+.menu-user {
+  display: none;
+  position: absolute;
+  box-shadow: 0 2px 4px rgba(34, 25, 25, 0.4);
+  border-radius: 0;
+  z-index: 100;
+  top: 35px;
+  left: 315px;
+  width: 150px;
+  height: auto;
+  background-color: #fff;
+  font-size: 0.8rem;
+  border-radius: 2px;
+}
+.singleName {
+  text-align: center;
+  font-size: 1.6rem;
+  padding: 20px 0px;
+}
+.singleNav {
+  border-bottom: 1px solid #e1e4e8;
+}
+.singleNav ul {
+  display: flex;
+  align-items: flex-start;
+}
+.singleNav ul li {
+  border: 1px solid #e1e4e8;
+  border-bottom: none;
+  border-radius: 2px;
+  padding: 5px 15px;
+  margin-right: 2px;
+}
+.singleNav ul li:hover {
+  cursor: pointer;
+  background-color: #f6f8fa;
+}
+.singleNav ul li.active {
+  background-color: #f6f8fa;
+  color: var(--clr-primary-1);
+}
+.singleNav .tab-item:hover {
+  background-color: lightcoral;
+}
+.singleNav ul li.active {
+  background-color: var(--clr-primary-1);
+  color: #fff;
+}
+.singleStudentBody {
+  background-color: lightcyan;
+  margin-top: 20px;
+  border-bottom-left-radius: 5px;
+  border-bottom-right-radius: 5px;
+  padding: 0px 20px;
+}
+.single-main {
+  display: none;
+
+  /* padding-left: 10px; */
+  /* margin-left: 10px; */
+  line-height: 30px;
+}
+.single-main.active {
+  display: block;
+}
+.single-point {
+  font-size: 1.2rem;
+  color: red;
+}
+.single-title {
+  font-size: 1.2rem;
+  font-weight: bold;
+}
+.answer {
+  max-height: 400px;
+  overflow-y: scroll;
+  overflow-x: scroll;
+}
+.single-answer-box {
+  border: 1px solid lightcoral;
+  padding: 10px 20px;
+}
+.question-title {
+  font-weight: bold;
+}
+
+@media (max-width: 992px) {
+  .menu-user.active {
+    top: 33px;
+    left: 115px;
+  }
+}
+@media (max-width: 576px) {
+  .singleName {
+    font-size: 1.2rem;
+    /* margin: 10px 0px; */
+  }
+}
