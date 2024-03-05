@@ -21,6 +21,8 @@
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
     />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.4.0/jspdf.umd.min.js"></script>
+
   </head>
 
   <body>
@@ -115,55 +117,21 @@
     <!-- THONG KE BODY -->
     <div class="statistic">
       <div class="container">
-        <div class="statistic-title">THỐNG KÊ</div>
-        <div class="statistic-form">
-          <label>Kỳ thi</label>
-          <select id="exam-select">
-            <option value="exam1">Luyện tập</option>
-            <option value="exam2">Giữa kì</option>
-            <option value="exam3">Cuối kì</option>
-          </select>
-          <label for="date-select">Select Date:</label>
-          <input type="date" id="date-select" />
-        </div>
-        <div class="statistic-body">
-          <table class="table table-hover table-bordered">
-            <thead>
-              <tr class="danger">
-                <th style="background-color: #f8d7da">STT</th>
-                <th style="background-color: #f8d7da">Tên bài kiểm tra</th>
-                <th style="background-color: #f8d7da">Tổng số lần tham gia</th>
-                <th style="background-color: #f8d7da">Tỷ lệ hoàn thành</th>
-                <th style="background-color: #f8d7da">Điểm trung bình</th>
-              </tr>
-            </thead>
-            <tbody>
-              <tr>
-                <td>1</td>
-                <td>Luyện tập</td>
-                <td>153</td>
-                <td>89,98%</td>
-                <td>8,92</td>
-              </tr>
-              <tr>
-                <td>2</td>
-                <td>Giữa kì</td>
-                <td>233</td>
-                <td>54,34%</td>
-                <td>3,93</td>
-              </tr>
-              <tr>
-                <td>3</td>
-                <td>Cuối kì</td>
-                <td>145</td>
-                <td>83,11%</td>
-                <td>8,96</td>
-              </tr>
-            </tbody>
-          </table>
-        </div>
+          <div class="statistic-title">THỐNG KÊ</div>
+          <div class="statistic-form">
+              <label for="examSelect">Kỳ thi</label>
+              <select id="examSelect">
+              </select>
+              <button id="exportPdfBtn">Xuất PDF</button>
+
+          </div>
+          <div class="statistic-body">
+              <table id="statisticsTable" class="table table-hover table-bordered">
+              </table>
+
+          </div>
       </div>
-    </div>
+  </div>
 
     <!-- js -->
     <script src="./assets/js/main.js"></script>

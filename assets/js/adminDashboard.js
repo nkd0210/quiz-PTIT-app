@@ -1,4 +1,3 @@
-// Object to store information
 const data = {
   exams: [
     { id: 1, name: "Luyện tập", status: "Không giới hạn thời gian" },
@@ -43,8 +42,6 @@ const data = {
   ],
 };
 
-// Function to populate exam table
-// Function to populate the exam table
 function populateExamTable() {
   const examTableBody = document.getElementById("exam-table-body");
   examTableBody.innerHTML = "";
@@ -60,15 +57,23 @@ function populateExamTable() {
       </td>
     `;
     examTableBody.appendChild(row);
+
+    const deleteBtn = row.querySelector(".delete-btn");
+    deleteBtn.addEventListener("click", () => {
+      const index = data.exams.findIndex((item) => item.id === exam.id);
+      if (index !== -1) {
+        data.exams.splice(index, 1);
+        populateExamTable();
+      }
+    });
   });
 }
 
-// Initially populate the exam table
+
 document.addEventListener("DOMContentLoaded", function () {
   populateExamTable();
 });
 
-// Function to populate user table
 function populateUserTable() {
   const userTableBody = document.getElementById("user-table-body");
   userTableBody.innerHTML = "";
@@ -83,11 +88,19 @@ function populateUserTable() {
       </td>
     `;
     userTableBody.appendChild(row);
+
+    const deleteBtn = row.querySelector(".delete-btn");
+    deleteBtn.addEventListener("click", () => {
+      const index = data.users.findIndex((item) => item.id === user.id);
+      if (index !== -1) {
+        data.users.splice(index, 1);
+        populateUserTable();
+      }
+    });
   });
 }
 
-// Initially populate tables
-// Function to populate statistics table
+
 function populateStatsTable() {
   const statsTableBody = document.getElementById("stats-table-body");
   statsTableBody.innerHTML = "";
@@ -128,14 +141,6 @@ createExamBtn.addEventListener("click", (e) => {
   e.preventDefault();
   window.location.href = "designTest.html";
 });
-
-// document.addEventListener("DOMContentLoaded", function () {
-//   const createExamBtn = document.getElementById("createExamBtn");
-
-//   createExamBtn.addEventListener("click", function () {
-//     window.location.href = "designTest.html";
-//   });
-// });
 
 const addUserBtn = document.querySelector(".addUserBtn");
 addUserBtn.onclick = (e) => {

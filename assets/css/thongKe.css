@@ -34,6 +34,28 @@ body {
   --clr-primary-3: #f8d7da;
 }
 
+th {
+  font-weight: 800;
+  font-size: 1.2rem;
+}
+
+#exportPdfBtn {
+  background-color: white;
+  color: red; 
+  border: none; 
+  padding: 0px   5px;
+  margin-left: 10px;
+  border-radius: 5px; 
+  cursor: pointer; 
+  transition: background-color 0.3s;
+}
+
+#exportPdfBtn:hover {
+  background-color: red;
+  color: white;
+}
+
+
 .menu-user {
   display: none;
   position: absolute;
